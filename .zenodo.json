@@ -23,6 +23,11 @@
   ],
   "related_identifiers": [
     {
+      "identifier": "10.5281/zenodo.23885813",
+      "relation": "isCompiledBy",
+      "resource_type": "software"
+    },
+    {
       "identifier": "10.32614/CRAN.package.text2sdg",
       "relation": "references",
       "resource_type": "software"

@@ -4,6 +4,7 @@ title: "sdg-tech-tagger-rs data: 300,001 OpenAlex works tagged with SDGs and dig
 type: dataset
 version: "0.1.0"
 license: CC-BY-4.0
+repository-code: "https://github.com/KnuxV/sdg-tech-tagger-rs-data"
 abstract: >-
   A random sample of 300,001 OpenAlex works of 2019 to 2024, tagged with
   sustainable development goals by the four query systems of text2sdg
@@ -29,6 +30,8 @@ references:
   - type: software
     title: "sdg-tech-tagger-rs: tagging texts with SDGs and digital technologies by published queries"
     version: "0.1.0"
+    doi: 10.5281/zenodo.23885813
+    repository-code: "https://github.com/KnuxV/sdg-tech-tagger-rs"
     license: GPL-3.0-only
     authors:
       - family-names: Michoud

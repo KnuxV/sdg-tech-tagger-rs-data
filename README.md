@@ -128,19 +128,6 @@ its inputs, which hold the abstracts, are not part of the record.
 ## Licence and citation
 
 The tables are under CC BY 4.0 (`LICENSE`). OpenAlex metadata is CC0. Cite
-this record, the package `sdg-tech-tagger-rs`, text2sdg, and OpenAlex; see
-`CITATION.cff`.
-
-## Before publishing
-
-To do before this record goes public; remove this section then.
-
-- [ ] Add set 1: run `build/build.py` with `--r-dir` once both R runs are
-      complete, and check the agreement block above.
-- [ ] Settle the layout of the files (proposed).
-- [ ] Add the DOI of the `sdg-tech-tagger-rs` Zenodo record to
-      `.zenodo.json` (`related_identifiers`, relation `isCompiledBy`,
-      resource type `software`) and to `CITATION.cff`.
-- [ ] Decide the release date.
-- [ ] Tag `v0.1.0`.
-- [ ] Regenerate `data/SHA256SUMS` (the build script does it).
+this record, the package `sdg-tech-tagger-rs`
+([doi:10.5281/zenodo.23885813](https://doi.org/10.5281/zenodo.23885813)),
+text2sdg, and OpenAlex; see `CITATION.cff`.
