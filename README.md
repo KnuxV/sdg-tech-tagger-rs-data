@@ -41,12 +41,12 @@ OpenAlex with the work identifiers (see below).
   same six groups with more terms each, and `UMBRELLA`). Both ship with the
   package, which lists every term in `docs/technology-queries.md`.
 - **LLM:** two models, `qwen3` (Qwen 3.6 35B A3B) and `gemma` (Gemma 4 31B),
-  under the frozen prompts of protocol v1, which ship with the package. Pass
+  each given a fixed prompt per pass (the prompts are not part of this record). Pass
   1 scores every label of every work; pass 2 asks again for every (work,
   label) whose pass 1 score is at least 0.25. A label is **positive** for a
   model when its pass 1 score is at least 0.25 and pass 2 answers `Y` (SDG)
   or one of `E`, `A`, `T` and `M` (technology: every answer but `N`, the
-  no, as the prompts of protocol v1 define them; a mention counts). The **consensus** is positive when both models are positive.
+  no; a mention counts). The **consensus** is positive when both models are positive.
 
 ## Set 1: R against Rust
 
