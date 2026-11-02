@@ -2,6 +2,7 @@
 
 Counts and shares computed on the 300,001 works of this record. They are
 aggregates of the files in `data/annotations/` and hold no work identifier.
+`build/build.py` copies them from the summary script it imports.
 Shares are per cent of the works counted.
 
 | File | What it gives |
@@ -9,8 +10,8 @@ Shares are per cent of the works counted.
 | `sdg_system_goal.tsv` | works tagged by each SDG system with each goal, and with any goal, in each mode of the port (`corrected`, `compatible`) |
 | `sdg_k_systems.tsv` | for each goal and for any goal, how many works are tagged by 0, 1, 2, 3 or 4 of the systems |
 | `sdg_by_year.tsv` | works tagged by each system with any goal, per publication year |
-| `adt_group_field.tsv` | works tagged by each technology group under the two technology queries (`natcom`, `gate_v2`), in the title, in the abstract, or in either |
-| `adt_overlap.tsv` | per group, works tagged by both queries, by `natcom` only, by `gate_v2` only, or by neither |
+| `adt_group_field.tsv` | works tagged by each technology group under the two technology queries (`simplified`, `extended`), in the title, in the abstract, or in either |
+| `adt_overlap.tsv` | per group, works tagged by both queries, by `simplified` only, by `extended` only, or by neither |
 | `adt_by_year.tsv` | works tagged with any technology under each query, per publication year |
 | `llm_positive_counts.tsv` | works the LLM labels positive, per label, under each rule |
 | `llm_run_checks.tsv` | checks of the four LLM runs: works read, rows, parse failures, pairs sent to pass 2, answers |

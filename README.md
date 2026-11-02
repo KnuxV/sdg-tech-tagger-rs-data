@@ -37,9 +37,9 @@ OpenAlex with the work identifiers (see below).
 - **sdg-tech-tagger-rs 0.1.0**, the port: mode `compatible` returns what
   text2sdg returns; mode `corrected`, its default, applies corrections that
   restore the published Aurora queries.
-- **Technology queries:** `natcom`, the simplified query of the Nature
-  Communications paper (six groups), and `gate_v2`, the gate of the thesis
-  (the same six groups and `UMBRELLA`). Both ship with the package.
+- **Technology queries:** `simplified` (six groups) and `extended` (the
+  same six groups with more terms each, and `UMBRELLA`). Both ship with the
+  package, which lists every term in `docs/technology-queries.md`.
 - **LLM:** two models, `qwen3` (Qwen 3.6 35B A3B) and `gemma` (Gemma 4 31B),
   under the frozen prompts of protocol v1, which ship with the package. Pass
   1 scores every label of every work; pass 2 asks again for every (work,
@@ -67,7 +67,7 @@ URL prefix (`W...`); `https://openalex.org/` + `work_id` is the work.
 |---|---|---|
 | `data/works.parquet` | work | `work_id`, `publication_year`, `type` (article, review), `field`, `subfield` (OpenAlex topics), `has_abstract`, `text_chars`, `text_sha256` |
 | `data/annotations/sdg.parquet` | firing of the port | `work_id`, `mode` (corrected, compatible), `system`, `sdg` (SDG-01 to SDG-17), `query_id` (the query's row in text2sdg's table), `features` (the matched words, comma separated) |
-| `data/annotations/technology.parquet` | (work, query, group) that fires | `work_id`, `query` (natcom, gate_v2), `group` (AI, IOT, CI, BL, ROB, AM, UMBRELLA), `title`, `abstract` (Booleans: where it fires) |
+| `data/annotations/technology.parquet` | (work, query, group) that fires | `work_id`, `query` (simplified, extended), `group` (AI, IOT, CI, BL, ROB, AM, UMBRELLA), `title`, `abstract` (Booleans: where it fires) |
 | `data/annotations/llm.parquet` | (work, exercise, label) | `work_id`, `exercise` (sdg, adt), `label` (SDG-01 to SDG-17; AI, IOT, COMPUTING_INFRASTRUCTURE, BLOCKCHAIN, ROBOTICS, ADDITIVE_MANUFACTURING), then for each model `<model>_pass1_score`, `<model>_pass2_answer` (null when pass 2 was not asked; `OTHER` when the answer was no letter), `<model>_positive`; and `consensus_positive` |
 | `data/r_vs_port/firings.parquet` | (work, mode, system, sdg, query_id) fired by R or the port | `work_id`, `mode`, `system`, `sdg`, `query_id`, `features_r`, `features_port`, `in_r`, `in_port`, `features_equal` |
 | `data/r_vs_port/agreement.tsv` | (mode, system) | `firings`, `both`, `port_only`, `r_only`, `features_equal` |
@@ -130,6 +130,6 @@ To do before this record goes public; remove this section then.
 - [ ] Add the DOI of the `sdg-tech-tagger-rs` Zenodo record to
       `.zenodo.json` (`related_identifiers`, relation `isCompiledBy`,
       resource type `software`) and to `CITATION.cff`.
-- [ ] Release after the Nature Communications revision.
+- [ ] Decide the release date.
 - [ ] Tag `v0.1.0`.
 - [ ] Regenerate `data/SHA256SUMS` (the build script does it).

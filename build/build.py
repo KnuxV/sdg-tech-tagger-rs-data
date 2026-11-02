@@ -1,4 +1,4 @@
-"""Build the files of the data record from the recall sample and the tools' runs.
+"""Build the files of the data record from the sample and the tools' runs.
 
 This script was run in the private environment where the sample was drawn
 and the tools were run; it is given for transparency, and cannot be run
@@ -10,11 +10,12 @@ same code and imports as `sdg_tech_tagger`.
 Consumes, read-only, from the directories given on the command line:
 - `--interim`: the prepared sample (300,001 OpenAlex works, with the `text`
   the tools read and the flags of the two technology queries), the port's
-  SDG firings in corrected mode (`recall_sdg_hits`), and the eight LLM runs
+  SDG firings in corrected mode, stored with the sample, and the eight LLM runs
   on the sample (SDG and technology, pass 1 and 2, qwen3 and gemma);
 - `--probe`: the script that sums up the queries and the LLM on the sample,
   the one place the LLM semantics are written, with its output tables
-  beside it;
+  beside it, which are copied to `data/summary/` with the two technology
+  queries named `simplified` and `extended`;
 - `--r-dir`, for set 1: the R runs of text2sdg 1.1.2 in both modes, sharded
   as `<r-dir>/{compat,corr}/shard_<i>/chunks/`.
 
@@ -22,6 +23,7 @@ Runs the port itself in compatible mode on the sample's text, and in
 corrected mode on a subset to check the stored firings.
 
 Produces, under `data/`: `works.parquet`, `annotations/{sdg,technology,llm}.parquet`,
+`summary/*.tsv`,
 `r_vs_port/{firings.parquet,agreement.tsv}` (set 1, only when every R chunk
 is there), and `SHA256SUMS`; and fills the agreement block of `README.md`.
 No title, abstract or DOI is written.
@@ -67,6 +69,14 @@ TECH = {
     "am": "AM",
     "umbrella": "UMBRELLA",
 }
+# The names of the two technology queries in the summary tables, as the probe
+# writes them, and as this record gives them. Applied in this order.
+SUMMARY_NAMES = (
+    ("natcom_in_gate_pct", "simplified_in_extended_pct"),
+    ("ANY6_VS_GATE_WITH_UMBRELLA", "ANY6_VS_EXTENDED_WITH_UMBRELLA"),
+    ("natcom", "simplified"),
+    ("gate_v2", "extended"),
+)
 README_START = "<!-- agreement:start -->"
 README_END = "<!-- agreement:end -->"
 
@@ -111,9 +121,9 @@ def works_table(sample: pl.DataFrame) -> pl.DataFrame:
 def technology_table(sample: pl.DataFrame) -> pl.DataFrame:
     """Rows (work, query, group) where the group fires in the title or abstract."""
     parts = []
-    for query, prefix in (("natcom", "q"), ("gate_v2", "g")):
+    for query, prefix in (("simplified", "q"), ("extended", "g")):
         for code, group in TECH.items():
-            if query == "natcom" and code == "umbrella":
+            if query == "simplified" and code == "umbrella":
                 continue
             t, a = f"{prefix}_{code}_title", f"{prefix}_{code}_abstract"
             parts.append(
@@ -366,6 +376,20 @@ def fill_readme(table: pl.DataFrame | None) -> None:
     )
 
 
+def copy_summary(probe_dir: Path) -> None:
+    """Copy the probe's summary tables to data/summary/, with the queries renamed."""
+    out = DATA / "summary"
+    out.mkdir(parents=True, exist_ok=True)
+    tables = sorted(probe_dir.glob("*.tsv"))
+    assert len(tables) == 10, f"expected 10 summary tables, found {len(tables)}"
+    for path in tables:
+        text = path.read_text(encoding="utf-8")
+        for old, new in SUMMARY_NAMES:
+            text = text.replace(old, new)
+        assert "natcom" not in text and "gate" not in text.lower(), path.name
+        (out / path.name).write_text(text, encoding="utf-8")
+
+
 def write_sums() -> None:
     """Write SHA256SUMS for every file under data/."""
     lines = []
@@ -429,6 +453,7 @@ def main() -> None:
     assert_llm_counts(llm, args.probe.parent)
     llm.write_parquet(DATA / "annotations/llm.parquet", compression="zstd")
     print("LLM positive counts equal the probe's")
+    copy_summary(args.probe.parent)
 
     table = None
     if not args.skip_r:
