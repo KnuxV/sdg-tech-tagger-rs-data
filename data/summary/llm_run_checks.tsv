@@ -1,0 +1,5 @@
+exercise	model	works_read_pass1	works_read_pass1_in_sample	pass1_rows	pass1_parse_failures	pairs_at_or_above_threshold	pass2_rows	pairs_without_pass2_answer	pass2_answers_not_a_letter	positive_pairs	positive_works
+sdg	qwen3	300001	300001	5100017	0	526799	526799	0	13	174370	158210
+adt	qwen3	300001	300001	1800006	0	39941	39941	0	2	30079	27278
+sdg	gemma	300001	300001	5100017	0	587207	587207	0	0	382131	234096
+adt	gemma	300001	300001	1800006	0	61949	61949	0	0	47143	39945

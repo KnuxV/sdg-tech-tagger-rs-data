@@ -1,8 +1,5 @@
 # sdg-tech-tagger-rs data: 300,001 OpenAlex works tagged by every method
 
-**Status: prepared, not published (D039): to be released after the Nature
-Communications revision.**
-
 A random sample of 300,001 OpenAlex works, tagged with sustainable
 development goals by the four query systems of text2sdg (Aurora, Elsevier,
 SIRIS, Auckland), with digital technologies by two query sets, and by two
@@ -15,10 +12,10 @@ large language models. It holds two sets:
 2. **The works fully annotated.** For each work: the technology queries, the
    four SDG systems in both modes, and the LLM labels.
 
-Identifiers and tags only: no title, abstract or DOI is included. The texts
-can be rebuilt from OpenAlex with the work identifiers (see below).
-
-The layout of the files is proposed and not yet confirmed.
+Identifiers and tags only: no title, abstract or DOI is included. The
+`features` columns hold the words a query matched, taken verbatim from the
+title and abstract, a few words per firing. The texts can be rebuilt from
+OpenAlex with the work identifiers (see below).
 
 ## The sample
 
@@ -54,7 +51,7 @@ The layout of the files is proposed and not yet confirmed.
 ## Set 1: R against Rust
 
 <!-- agreement:start -->
-Set 1 is not built yet: the R runs on all 300,001 works are not complete.
+The agreement table of set 1 is written here by `build/build.py` once both R runs are complete.
 <!-- agreement:end -->
 
 On a first random subset of 2,000 of these works, R and the port gave the
@@ -74,6 +71,7 @@ URL prefix (`W...`); `https://openalex.org/` + `work_id` is the work.
 | `data/annotations/llm.parquet` | (work, exercise, label) | `work_id`, `exercise` (sdg, adt), `label` (SDG-01 to SDG-17; AI, IOT, COMPUTING_INFRASTRUCTURE, BLOCKCHAIN, ROBOTICS, ADDITIVE_MANUFACTURING), then for each model `<model>_pass1_score`, `<model>_pass2_answer` (null when pass 2 was not asked; `OTHER` when the answer was no letter), `<model>_positive`; and `consensus_positive` |
 | `data/r_vs_port/firings.parquet` | (work, mode, system, sdg, query_id) fired by R or the port | `work_id`, `mode`, `system`, `sdg`, `query_id`, `features_r`, `features_port`, `in_r`, `in_port`, `features_equal` |
 | `data/r_vs_port/agreement.tsv` | (mode, system) | `firings`, `both`, `port_only`, `r_only`, `features_equal` |
+| `data/summary/*.tsv` | see `data/summary/README.md` | aggregate counts and the comparison with the LLM |
 | `data/SHA256SUMS` | file | checksums of everything under `data/` |
 
 A work absent from `sdg.parquet` or `technology.parquet` is a work on which
@@ -111,11 +109,27 @@ text, byte for byte.
 `build/build.py` reads the sample, the stored runs and the R outputs, runs
 the port, and writes `data/`. It checks that the stored corrected-mode
 firings equal a fresh run of the port on 5,000 works, and that the LLM
-positives equal the counts of the summary published with the package. It
-writes set 1 only when every chunk of both R runs is there.
+positives equal the counts in `data/summary/llm_positive_counts.tsv`. It
+writes set 1 only when every chunk of both R runs is there. It was run in
+the environment where the sample was drawn, and is given for transparency:
+its inputs, which hold the abstracts, are not part of the record.
 
 ## Licence and citation
 
 The tables are under CC BY 4.0 (`LICENSE`). OpenAlex metadata is CC0. Cite
 this record, the package `sdg-tech-tagger-rs`, text2sdg, and OpenAlex; see
 `CITATION.cff`.
+
+## Before publishing
+
+To do before this record goes public; remove this section then.
+
+- [ ] Add set 1: run `build/build.py` with `--r-dir` once both R runs are
+      complete, and check the agreement block above.
+- [ ] Settle the layout of the files (proposed).
+- [ ] Add the DOI of the `sdg-tech-tagger-rs` Zenodo record to
+      `.zenodo.json` (`related_identifiers`, relation `isCompiledBy`,
+      resource type `software`) and to `CITATION.cff`.
+- [ ] Release after the Nature Communications revision.
+- [ ] Tag `v0.1.0`.
+- [ ] Regenerate `data/SHA256SUMS` (the build script does it).

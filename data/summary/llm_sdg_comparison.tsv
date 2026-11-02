@@ -1,0 +1,761 @@
+rule	mode	system	goal	unit	tagged	llm_positive	both	precision_proxy_pct	precision_ci_lo	precision_ci_hi	recall_proxy_pct	recall_ci_lo	recall_ci_hi	below_floor	system_has_goal_queries
+qwen3	corrected	Aurora	SDG-01	work	1103	858	350	31.73	29.05	34.54	40.79	37.55	44.11	false	true
+qwen3	corrected	Aurora	SDG-02	work	740	5999	529	71.49	68.13	74.62	8.82	8.13	9.56	false	true
+qwen3	corrected	Aurora	SDG-03	work	5592	93531	3245	58.03	56.73	59.32	3.47	3.35	3.59	false	true
+qwen3	corrected	Aurora	SDG-04	work	1826	14204	1046	57.28	55.0	59.53	7.36	6.95	7.81	false	true
+qwen3	corrected	Aurora	SDG-05	work	517	2241	354	68.47	64.34	72.33	15.8	14.35	17.36	false	true
+qwen3	corrected	Aurora	SDG-06	work	1453	5310	1117	76.88	74.64	78.97	21.04	19.96	22.15	false	true
+qwen3	corrected	Aurora	SDG-07	work	687	8725	419	60.99	57.29	64.57	4.8	4.37	5.27	false	true
+qwen3	corrected	Aurora	SDG-08	work	809	6941	507	62.67	59.28	65.94	7.3	6.72	7.94	false	true
+qwen3	corrected	Aurora	SDG-09	work	530	8369	171	32.26	28.42	36.36	2.04	1.76	2.37	false	true
+qwen3	corrected	Aurora	SDG-10	work	333	3505	172	51.65	46.3	56.97	4.91	4.24	5.67	false	true
+qwen3	corrected	Aurora	SDG-11	work	1700	6290	1092	64.24	61.93	66.48	17.36	16.44	18.32	false	true
+qwen3	corrected	Aurora	SDG-12	work	1764	3600	604	34.24	32.06	36.49	16.78	15.59	18.03	false	true
+qwen3	corrected	Aurora	SDG-13	work	5472	3007	1844	33.7	32.46	34.96	61.32	59.57	63.05	false	true
+qwen3	corrected	Aurora	SDG-14	work	1998	2328	1054	52.75	50.56	54.93	45.27	43.26	47.3	false	true
+qwen3	corrected	Aurora	SDG-15	work	1620	3922	572	35.31	33.02	37.67	14.58	13.51	15.72	false	true
+qwen3	corrected	Aurora	SDG-16	work	1468	5217	806	54.9	52.35	57.43	15.45	14.49	16.46	false	true
+qwen3	corrected	Aurora	SDG-17	work	846	323	98	11.58	9.6	13.92	30.34	25.58	35.56	false	true
+qwen3	corrected	Aurora	all	work-goal pair	28458	174370	13980	49.13	48.54	49.71	8.02	7.89	8.15	false	true
+qwen3	corrected	Aurora	any	work, any goal	24069	158210	19349	80.39	79.88	80.89	12.23	12.07	12.39	false	true
+qwen3	corrected	Elsevier	SDG-01	work	2623	858	262	9.99	8.9	11.2	30.54	27.55	33.7	false	true
+qwen3	corrected	Elsevier	SDG-02	work	2555	5999	1551	60.7	58.8	62.58	25.85	24.76	26.98	false	true
+qwen3	corrected	Elsevier	SDG-03	work	39651	93531	34265	86.42	86.08	86.75	36.63	36.33	36.94	false	true
+qwen3	corrected	Elsevier	SDG-04	work	973	14204	781	80.27	77.65	82.65	5.5	5.14	5.89	false	true
+qwen3	corrected	Elsevier	SDG-05	work	1133	2241	714	63.02	60.17	65.78	31.86	29.96	33.82	false	true
+qwen3	corrected	Elsevier	SDG-06	work	1443	5310	1201	83.23	81.21	85.07	22.62	21.51	23.76	false	true
+qwen3	corrected	Elsevier	SDG-07	work	6421	8725	3694	57.53	56.32	58.73	42.34	41.3	43.38	false	true
+qwen3	corrected	Elsevier	SDG-08	work	3633	6941	1750	48.17	46.55	49.8	25.21	24.2	26.25	false	true
+qwen3	corrected	Elsevier	SDG-09	work	1004	8369	391	38.94	35.98	42.0	4.67	4.24	5.15	false	true
+qwen3	corrected	Elsevier	SDG-10	work	1246	3505	446	35.79	33.18	38.5	12.72	11.66	13.87	false	true
+qwen3	corrected	Elsevier	SDG-11	work	3168	6290	1952	61.62	59.91	63.29	31.03	29.9	32.19	false	true
+qwen3	corrected	Elsevier	SDG-12	work	2338	3600	953	40.76	38.79	42.77	26.47	25.06	27.94	false	true
+qwen3	corrected	Elsevier	SDG-13	work	4166	3007	1535	36.85	35.39	38.32	51.05	49.26	52.83	false	true
+qwen3	corrected	Elsevier	SDG-14	work	516	2328	382	74.03	70.08	77.63	16.41	14.96	17.97	false	true
+qwen3	corrected	Elsevier	SDG-15	work	2130	3922	803	37.7	35.67	39.78	20.47	19.24	21.77	false	true
+qwen3	corrected	Elsevier	SDG-16	work	4477	5217	2236	49.94	48.48	51.41	42.86	41.52	44.21	false	true
+qwen3	corrected	Elsevier	SDG-17	work	0	323	0							true	false
+qwen3	corrected	Elsevier	all	work-goal pair	77477	174370	52916	68.3	67.97	68.63	30.35	30.13	30.56	false	true
+qwen3	corrected	Elsevier	any	work, any goal	67698	158210	57065	84.29	84.02	84.57	36.07	35.83	36.31	false	true
+qwen3	corrected	SIRIS	SDG-01	work	2056	858	532	25.88	24.03	27.81	62.0	58.71	65.19	false	true
+qwen3	corrected	SIRIS	SDG-02	work	3313	5999	1698	51.25	49.55	52.95	28.3	27.18	29.46	false	true
+qwen3	corrected	SIRIS	SDG-03	work	9391	93531	7005	74.59	73.7	75.46	7.49	7.32	7.66	false	true
+qwen3	corrected	SIRIS	SDG-04	work	2657	14204	1812	68.2	66.4	69.94	12.76	12.22	13.32	false	true
+qwen3	corrected	SIRIS	SDG-05	work	1543	2241	879	56.97	54.48	59.42	39.22	37.22	41.26	false	true
+qwen3	corrected	SIRIS	SDG-06	work	4049	5310	2723	67.25	65.79	68.68	51.28	49.94	52.62	false	true
+qwen3	corrected	SIRIS	SDG-07	work	8130	8725	4678	57.54	56.46	58.61	53.62	52.57	54.66	false	true
+qwen3	corrected	SIRIS	SDG-08	work	4374	6941	1099	25.13	23.86	26.43	15.83	14.99	16.71	false	true
+qwen3	corrected	SIRIS	SDG-09	work	4296	8369	756	17.6	16.49	18.77	9.03	8.44	9.67	false	true
+qwen3	corrected	SIRIS	SDG-10	work	5202	3505	1048	20.15	19.08	21.26	29.9	28.41	31.44	false	true
+qwen3	corrected	SIRIS	SDG-11	work	6296	6290	2534	40.25	39.04	41.46	40.29	39.08	41.5	false	true
+qwen3	corrected	SIRIS	SDG-12	work	3761	3600	1499	39.86	38.3	41.43	41.64	40.04	43.26	false	true
+qwen3	corrected	SIRIS	SDG-13	work	6219	3007	1947	31.31	30.17	32.47	64.75	63.02	66.44	false	true
+qwen3	corrected	SIRIS	SDG-14	work	1739	2328	841	48.36	46.02	50.71	36.13	34.2	38.1	false	true
+qwen3	corrected	SIRIS	SDG-15	work	4488	3922	1999	44.54	43.09	46.0	50.97	49.4	52.53	false	true
+qwen3	corrected	SIRIS	SDG-16	work	4631	5217	1631	35.22	33.86	36.61	31.26	30.02	32.53	false	true
+qwen3	corrected	SIRIS	SDG-17	work	0	323	0							true	false
+qwen3	corrected	SIRIS	all	work-goal pair	72145	174370	32681	45.3	44.94	45.66	18.74	18.56	18.93	false	true
+qwen3	corrected	SIRIS	any	work, any goal	51412	158210	39294	76.43	76.06	76.79	24.84	24.62	25.05	false	true
+qwen3	corrected	Auckland	SDG-01	work	1964	858	495	25.2	23.33	27.17	57.69	54.36	60.96	false	true
+qwen3	corrected	Auckland	SDG-02	work	8246	5999	3086	37.42	36.39	38.47	51.44	50.18	52.71	false	true
+qwen3	corrected	Auckland	SDG-03	work	70538	93531	56868	80.62	80.33	80.91	60.8	60.49	61.11	false	true
+qwen3	corrected	Auckland	SDG-04	work	14251	14204	9243	64.86	64.07	65.64	65.07	64.29	65.85	false	true
+qwen3	corrected	Auckland	SDG-05	work	2529	2241	1178	46.58	44.64	48.53	52.57	50.5	54.63	false	true
+qwen3	corrected	Auckland	SDG-06	work	5927	5310	3535	59.64	58.39	60.88	66.57	65.29	67.83	false	true
+qwen3	corrected	Auckland	SDG-07	work	9829	8725	5533	56.29	55.31	57.27	63.42	62.4	64.42	false	true
+qwen3	corrected	Auckland	SDG-08	work	6180	6941	2889	46.75	45.51	47.99	41.62	40.47	42.79	false	true
+qwen3	corrected	Auckland	SDG-09	work	7088	8369	1915	27.02	26.0	28.06	22.88	21.99	23.79	false	true
+qwen3	corrected	Auckland	SDG-10	work	8192	3505	1390	16.97	16.17	17.8	39.66	38.05	41.29	false	true
+qwen3	corrected	Auckland	SDG-11	work	11699	6290	3380	28.89	28.08	29.72	53.74	52.5	54.97	false	true
+qwen3	corrected	Auckland	SDG-12	work	7111	3600	1553	21.84	20.89	22.81	43.14	41.53	44.76	false	true
+qwen3	corrected	Auckland	SDG-13	work	6345	3007	2390	37.67	36.48	38.87	79.48	78.0	80.89	false	true
+qwen3	corrected	Auckland	SDG-14	work	4528	2328	1527	33.72	32.36	35.11	65.59	63.64	67.5	false	true
+qwen3	corrected	Auckland	SDG-15	work	10217	3922	2848	27.88	27.01	28.75	72.62	71.2	73.99	false	true
+qwen3	corrected	Auckland	SDG-16	work	6344	5217	2680	42.24	41.03	43.46	51.37	50.01	52.73	false	true
+qwen3	corrected	Auckland	SDG-17	work	0	323	0							true	false
+qwen3	corrected	Auckland	all	work-goal pair	180988	174370	100510	55.53	55.31	55.76	57.64	57.41	57.87	false	true
+qwen3	corrected	Auckland	any	work, any goal	133231	158210	104049	78.1	77.87	78.32	65.77	65.53	66.0	false	true
+qwen3	corrected	union	SDG-01	work	5088	858	611	12.01	11.14	12.93	71.21	68.09	74.14	false	true
+qwen3	corrected	union	SDG-02	work	9855	5999	3549	36.01	35.07	36.97	59.16	57.91	60.4	false	true
+qwen3	corrected	union	SDG-03	work	72911	93531	57834	79.32	79.03	79.61	61.83	61.52	62.14	false	true
+qwen3	corrected	union	SDG-04	work	15500	14204	9578	61.79	61.03	62.56	67.43	66.66	68.2	false	true
+qwen3	corrected	union	SDG-05	work	2969	2241	1338	45.07	43.28	46.86	59.71	57.66	61.72	false	true
+qwen3	corrected	union	SDG-06	work	6472	5310	3722	57.51	56.3	58.71	70.09	68.85	71.31	false	true
+qwen3	corrected	union	SDG-07	work	12715	8725	6324	49.74	48.87	50.61	72.48	71.53	73.41	false	true
+qwen3	corrected	union	SDG-08	work	9181	6941	3179	34.63	33.66	35.61	45.8	44.63	46.97	false	true
+qwen3	corrected	union	SDG-09	work	10479	8369	2298	21.93	21.15	22.73	27.46	26.51	28.42	false	true
+qwen3	corrected	union	SDG-10	work	11524	3505	1760	15.27	14.63	15.94	50.21	48.56	51.87	false	true
+qwen3	corrected	union	SDG-11	work	15159	6290	4069	26.84	26.14	27.55	64.69	63.5	65.86	false	true
+qwen3	corrected	union	SDG-12	work	9645	3600	2083	21.6	20.79	22.43	57.86	56.24	59.46	false	true
+qwen3	corrected	union	SDG-13	work	9588	3007	2542	26.51	25.64	27.41	84.54	83.2	85.78	false	true
+qwen3	corrected	union	SDG-14	work	5432	2328	1733	31.9	30.68	33.16	74.44	72.63	76.17	false	true
+qwen3	corrected	union	SDG-15	work	12839	3922	3161	24.62	23.88	25.37	80.6	79.33	81.8	false	true
+qwen3	corrected	union	SDG-16	work	9158	5217	3142	34.31	33.34	35.29	60.23	58.89	61.55	false	true
+qwen3	corrected	union	SDG-17	work	846	323	98	11.58	9.6	13.92	30.34	25.58	35.56	false	true
+qwen3	corrected	union	all	work-goal pair	219361	174370	107021	48.79	48.58	49.0	61.38	61.15	61.6	false	true
+qwen3	corrected	union	any	work, any goal	144617	158210	109594	75.78	75.56	76.0	69.27	69.04	69.5	false	true
+qwen3	compatible	Aurora	SDG-01	work	1105	858	350	31.67	29.0	34.48	40.79	37.55	44.11	false	true
+qwen3	compatible	Aurora	SDG-02	work	691	5999	509	73.66	70.25	76.81	8.48	7.81	9.22	false	true
+qwen3	compatible	Aurora	SDG-03	work	5987	93531	3571	59.65	58.4	60.88	3.82	3.7	3.94	false	true
+qwen3	compatible	Aurora	SDG-04	work	1831	14204	1051	57.4	55.12	59.65	7.4	6.98	7.84	false	true
+qwen3	compatible	Aurora	SDG-05	work	517	2241	354	68.47	64.34	72.33	15.8	14.35	17.36	false	true
+qwen3	compatible	Aurora	SDG-06	work	1658	5310	1203	72.56	70.36	74.65	22.66	21.55	23.8	false	true
+qwen3	compatible	Aurora	SDG-07	work	1483	8725	990	66.76	64.32	69.11	11.35	10.7	12.03	false	true
+qwen3	compatible	Aurora	SDG-08	work	873	6941	550	63.0	59.75	66.14	7.92	7.31	8.58	false	true
+qwen3	compatible	Aurora	SDG-09	work	533	8369	173	32.46	28.62	36.55	2.07	1.78	2.39	false	true
+qwen3	compatible	Aurora	SDG-10	work	348	3505	182	52.3	47.05	57.49	5.19	4.51	5.98	false	true
+qwen3	compatible	Aurora	SDG-11	work	1947	6290	1216	62.46	60.28	64.58	19.33	18.38	20.33	false	true
+qwen3	compatible	Aurora	SDG-12	work	1793	3600	617	34.41	32.25	36.64	17.14	15.94	18.4	false	true
+qwen3	compatible	Aurora	SDG-13	work	5484	3007	1844	33.63	32.39	34.89	61.32	59.57	63.05	false	true
+qwen3	compatible	Aurora	SDG-14	work	1998	2328	1054	52.75	50.56	54.93	45.27	43.26	47.3	false	true
+qwen3	compatible	Aurora	SDG-15	work	1662	3922	599	36.04	33.77	38.38	15.27	14.18	16.43	false	true
+qwen3	compatible	Aurora	SDG-16	work	1476	5217	806	54.61	52.06	57.13	15.45	14.49	16.46	false	true
+qwen3	compatible	Aurora	SDG-17	work	846	323	98	11.58	9.6	13.92	30.34	25.58	35.56	false	true
+qwen3	compatible	Aurora	all	work-goal pair	30232	174370	15167	50.17	49.61	50.73	8.7	8.57	8.83	false	true
+qwen3	compatible	Aurora	any	work, any goal	25349	158210	20441	80.64	80.15	81.12	12.92	12.76	13.09	false	true
+qwen3	compatible	Elsevier	SDG-01	work	2623	858	262	9.99	8.9	11.2	30.54	27.55	33.7	false	true
+qwen3	compatible	Elsevier	SDG-02	work	2555	5999	1551	60.7	58.8	62.58	25.85	24.76	26.98	false	true
+qwen3	compatible	Elsevier	SDG-03	work	39651	93531	34265	86.42	86.08	86.75	36.63	36.33	36.94	false	true
+qwen3	compatible	Elsevier	SDG-04	work	973	14204	781	80.27	77.65	82.65	5.5	5.14	5.89	false	true
+qwen3	compatible	Elsevier	SDG-05	work	1133	2241	714	63.02	60.17	65.78	31.86	29.96	33.82	false	true
+qwen3	compatible	Elsevier	SDG-06	work	1443	5310	1201	83.23	81.21	85.07	22.62	21.51	23.76	false	true
+qwen3	compatible	Elsevier	SDG-07	work	6421	8725	3694	57.53	56.32	58.73	42.34	41.3	43.38	false	true
+qwen3	compatible	Elsevier	SDG-08	work	3633	6941	1750	48.17	46.55	49.8	25.21	24.2	26.25	false	true
+qwen3	compatible	Elsevier	SDG-09	work	1004	8369	391	38.94	35.98	42.0	4.67	4.24	5.15	false	true
+qwen3	compatible	Elsevier	SDG-10	work	1246	3505	446	35.79	33.18	38.5	12.72	11.66	13.87	false	true
+qwen3	compatible	Elsevier	SDG-11	work	3168	6290	1952	61.62	59.91	63.29	31.03	29.9	32.19	false	true
+qwen3	compatible	Elsevier	SDG-12	work	2338	3600	953	40.76	38.79	42.77	26.47	25.06	27.94	false	true
+qwen3	compatible	Elsevier	SDG-13	work	4166	3007	1535	36.85	35.39	38.32	51.05	49.26	52.83	false	true
+qwen3	compatible	Elsevier	SDG-14	work	516	2328	382	74.03	70.08	77.63	16.41	14.96	17.97	false	true
+qwen3	compatible	Elsevier	SDG-15	work	2130	3922	803	37.7	35.67	39.78	20.47	19.24	21.77	false	true
+qwen3	compatible	Elsevier	SDG-16	work	4477	5217	2236	49.94	48.48	51.41	42.86	41.52	44.21	false	true
+qwen3	compatible	Elsevier	SDG-17	work	0	323	0							true	false
+qwen3	compatible	Elsevier	all	work-goal pair	77477	174370	52916	68.3	67.97	68.63	30.35	30.13	30.56	false	true
+qwen3	compatible	Elsevier	any	work, any goal	67698	158210	57065	84.29	84.02	84.57	36.07	35.83	36.31	false	true
+qwen3	compatible	SIRIS	SDG-01	work	2056	858	532	25.88	24.03	27.81	62.0	58.71	65.19	false	true
+qwen3	compatible	SIRIS	SDG-02	work	3313	5999	1698	51.25	49.55	52.95	28.3	27.18	29.46	false	true
+qwen3	compatible	SIRIS	SDG-03	work	9391	93531	7005	74.59	73.7	75.46	7.49	7.32	7.66	false	true
+qwen3	compatible	SIRIS	SDG-04	work	2657	14204	1812	68.2	66.4	69.94	12.76	12.22	13.32	false	true
+qwen3	compatible	SIRIS	SDG-05	work	1543	2241	879	56.97	54.48	59.42	39.22	37.22	41.26	false	true
+qwen3	compatible	SIRIS	SDG-06	work	4049	5310	2723	67.25	65.79	68.68	51.28	49.94	52.62	false	true
+qwen3	compatible	SIRIS	SDG-07	work	8130	8725	4678	57.54	56.46	58.61	53.62	52.57	54.66	false	true
+qwen3	compatible	SIRIS	SDG-08	work	4374	6941	1099	25.13	23.86	26.43	15.83	14.99	16.71	false	true
+qwen3	compatible	SIRIS	SDG-09	work	4296	8369	756	17.6	16.49	18.77	9.03	8.44	9.67	false	true
+qwen3	compatible	SIRIS	SDG-10	work	5202	3505	1048	20.15	19.08	21.26	29.9	28.41	31.44	false	true
+qwen3	compatible	SIRIS	SDG-11	work	6296	6290	2534	40.25	39.04	41.46	40.29	39.08	41.5	false	true
+qwen3	compatible	SIRIS	SDG-12	work	3761	3600	1499	39.86	38.3	41.43	41.64	40.04	43.26	false	true
+qwen3	compatible	SIRIS	SDG-13	work	6219	3007	1947	31.31	30.17	32.47	64.75	63.02	66.44	false	true
+qwen3	compatible	SIRIS	SDG-14	work	1739	2328	841	48.36	46.02	50.71	36.13	34.2	38.1	false	true
+qwen3	compatible	SIRIS	SDG-15	work	4488	3922	1999	44.54	43.09	46.0	50.97	49.4	52.53	false	true
+qwen3	compatible	SIRIS	SDG-16	work	4631	5217	1631	35.22	33.86	36.61	31.26	30.02	32.53	false	true
+qwen3	compatible	SIRIS	SDG-17	work	0	323	0							true	false
+qwen3	compatible	SIRIS	all	work-goal pair	72145	174370	32681	45.3	44.94	45.66	18.74	18.56	18.93	false	true
+qwen3	compatible	SIRIS	any	work, any goal	51412	158210	39294	76.43	76.06	76.79	24.84	24.62	25.05	false	true
+qwen3	compatible	Auckland	SDG-01	work	1964	858	495	25.2	23.33	27.17	57.69	54.36	60.96	false	true
+qwen3	compatible	Auckland	SDG-02	work	8246	5999	3086	37.42	36.39	38.47	51.44	50.18	52.71	false	true
+qwen3	compatible	Auckland	SDG-03	work	70538	93531	56868	80.62	80.33	80.91	60.8	60.49	61.11	false	true
+qwen3	compatible	Auckland	SDG-04	work	14251	14204	9243	64.86	64.07	65.64	65.07	64.29	65.85	false	true
+qwen3	compatible	Auckland	SDG-05	work	2529	2241	1178	46.58	44.64	48.53	52.57	50.5	54.63	false	true
+qwen3	compatible	Auckland	SDG-06	work	5927	5310	3535	59.64	58.39	60.88	66.57	65.29	67.83	false	true
+qwen3	compatible	Auckland	SDG-07	work	9829	8725	5533	56.29	55.31	57.27	63.42	62.4	64.42	false	true
+qwen3	compatible	Auckland	SDG-08	work	6180	6941	2889	46.75	45.51	47.99	41.62	40.47	42.79	false	true
+qwen3	compatible	Auckland	SDG-09	work	7088	8369	1915	27.02	26.0	28.06	22.88	21.99	23.79	false	true
+qwen3	compatible	Auckland	SDG-10	work	8192	3505	1390	16.97	16.17	17.8	39.66	38.05	41.29	false	true
+qwen3	compatible	Auckland	SDG-11	work	11699	6290	3380	28.89	28.08	29.72	53.74	52.5	54.97	false	true
+qwen3	compatible	Auckland	SDG-12	work	7111	3600	1553	21.84	20.89	22.81	43.14	41.53	44.76	false	true
+qwen3	compatible	Auckland	SDG-13	work	6345	3007	2390	37.67	36.48	38.87	79.48	78.0	80.89	false	true
+qwen3	compatible	Auckland	SDG-14	work	4528	2328	1527	33.72	32.36	35.11	65.59	63.64	67.5	false	true
+qwen3	compatible	Auckland	SDG-15	work	10217	3922	2848	27.88	27.01	28.75	72.62	71.2	73.99	false	true
+qwen3	compatible	Auckland	SDG-16	work	6344	5217	2680	42.24	41.03	43.46	51.37	50.01	52.73	false	true
+qwen3	compatible	Auckland	SDG-17	work	0	323	0							true	false
+qwen3	compatible	Auckland	all	work-goal pair	180988	174370	100510	55.53	55.31	55.76	57.64	57.41	57.87	false	true
+qwen3	compatible	Auckland	any	work, any goal	133231	158210	104049	78.1	77.87	78.32	65.77	65.53	66.0	false	true
+qwen3	compatible	union	SDG-01	work	5089	858	611	12.01	11.14	12.93	71.21	68.09	74.14	false	true
+qwen3	compatible	union	SDG-02	work	9839	5999	3546	36.04	35.1	36.99	59.11	57.86	60.35	false	true
+qwen3	compatible	union	SDG-03	work	72964	93531	57856	79.29	79.0	79.59	61.86	61.55	62.17	false	true
+qwen3	compatible	union	SDG-04	work	15501	14204	9579	61.8	61.03	62.56	67.44	66.66	68.2	false	true
+qwen3	compatible	union	SDG-05	work	2969	2241	1338	45.07	43.28	46.86	59.71	57.66	61.72	false	true
+qwen3	compatible	union	SDG-06	work	6535	5310	3727	57.03	55.83	58.23	70.19	68.94	71.4	false	true
+qwen3	compatible	union	SDG-07	work	12765	8725	6340	49.67	48.8	50.53	72.66	71.72	73.59	false	true
+qwen3	compatible	union	SDG-08	work	9181	6941	3179	34.63	33.66	35.61	45.8	44.63	46.97	false	true
+qwen3	compatible	union	SDG-09	work	10481	8369	2299	21.93	21.15	22.74	27.47	26.52	28.44	false	true
+qwen3	compatible	union	SDG-10	work	11527	3505	1762	15.29	14.64	15.95	50.27	48.62	51.93	false	true
+qwen3	compatible	union	SDG-11	work	15245	6290	4080	26.76	26.07	27.47	64.86	63.68	66.04	false	true
+qwen3	compatible	union	SDG-12	work	9650	3600	2085	21.61	20.8	22.44	57.92	56.3	59.52	false	true
+qwen3	compatible	union	SDG-13	work	9599	3007	2542	26.48	25.61	27.37	84.54	83.2	85.78	false	true
+qwen3	compatible	union	SDG-14	work	5432	2328	1733	31.9	30.68	33.16	74.44	72.63	76.17	false	true
+qwen3	compatible	union	SDG-15	work	12848	3922	3163	24.62	23.88	25.37	80.65	79.38	81.85	false	true
+qwen3	compatible	union	SDG-16	work	9163	5217	3142	34.29	33.32	35.27	60.23	58.89	61.55	false	true
+qwen3	compatible	union	SDG-17	work	846	323	98	11.58	9.6	13.92	30.34	25.58	35.56	false	true
+qwen3	compatible	union	all	work-goal pair	219634	174370	107080	48.75	48.54	48.96	61.41	61.18	61.64	false	true
+qwen3	compatible	union	any	work, any goal	144711	158210	109637	75.76	75.54	75.98	69.3	69.07	69.53	false	true
+gemma	corrected	Aurora	SDG-01	work	1103	4923	719	65.19	62.33	67.94	14.6	13.65	15.62	false	true
+gemma	corrected	Aurora	SDG-02	work	740	17591	692	93.51	91.5	95.07	3.93	3.66	4.23	false	true
+gemma	corrected	Aurora	SDG-03	work	5592	119240	3935	70.37	69.16	71.55	3.3	3.2	3.4	false	true
+gemma	corrected	Aurora	SDG-04	work	1826	21313	1339	73.33	71.25	75.31	6.28	5.96	6.62	false	true
+gemma	corrected	Aurora	SDG-05	work	517	5662	450	87.04	83.87	89.66	7.95	7.27	8.68	false	true
+gemma	corrected	Aurora	SDG-06	work	1453	10336	1350	92.91	91.48	94.12	13.06	12.43	13.72	false	true
+gemma	corrected	Aurora	SDG-07	work	687	18895	570	82.97	79.98	85.6	3.02	2.78	3.27	false	true
+gemma	corrected	Aurora	SDG-08	work	809	23278	707	87.39	84.93	89.5	3.04	2.82	3.27	false	true
+gemma	corrected	Aurora	SDG-09	work	530	53922	392	73.96	70.06	77.52	0.73	0.66	0.8	false	true
+gemma	corrected	Aurora	SDG-10	work	333	15432	274	82.28	77.82	86.01	1.78	1.58	2.0	false	true
+gemma	corrected	Aurora	SDG-11	work	1700	20030	1472	86.59	84.89	88.13	7.35	7.0	7.72	false	true
+gemma	corrected	Aurora	SDG-12	work	1764	21626	1423	80.67	78.76	82.44	6.58	6.26	6.92	false	true
+gemma	corrected	Aurora	SDG-13	work	5472	10793	4020	73.46	72.28	74.62	37.25	36.34	38.16	false	true
+gemma	corrected	Aurora	SDG-14	work	1998	5210	1441	72.12	70.11	74.04	27.66	26.46	28.89	false	true
+gemma	corrected	Aurora	SDG-15	work	1620	12900	919	56.73	54.3	59.12	7.12	6.69	7.58	false	true
+gemma	corrected	Aurora	SDG-16	work	1468	17547	1242	84.6	82.67	86.36	7.08	6.71	7.47	false	true
+gemma	corrected	Aurora	SDG-17	work	846	3433	388	45.86	42.53	49.23	11.3	10.29	12.4	false	true
+gemma	corrected	Aurora	all	work-goal pair	28458	382131	21333	74.96	74.46	75.46	5.58	5.51	5.66	false	true
+gemma	corrected	Aurora	any	work, any goal	24069	234096	23270	96.68	96.45	96.9	9.94	9.82	10.06	false	true
+gemma	corrected	Elsevier	SDG-01	work	2623	4923	594	22.65	21.08	24.29	12.07	11.19	13.01	false	true
+gemma	corrected	Elsevier	SDG-02	work	2555	17591	2237	87.55	86.22	88.78	12.72	12.23	13.22	false	true
+gemma	corrected	Elsevier	SDG-03	work	39651	119240	37723	95.14	94.92	95.34	31.64	31.37	31.9	false	true
+gemma	corrected	Elsevier	SDG-04	work	973	21313	878	90.24	88.21	91.95	4.12	3.86	4.39	false	true
+gemma	corrected	Elsevier	SDG-05	work	1133	5662	905	79.88	77.44	82.11	15.98	15.05	16.96	false	true
+gemma	corrected	Elsevier	SDG-06	work	1443	10336	1374	95.22	93.99	96.2	13.29	12.65	13.96	false	true
+gemma	corrected	Elsevier	SDG-07	work	6421	18895	5238	81.58	80.61	82.51	27.72	27.09	28.36	false	true
+gemma	corrected	Elsevier	SDG-08	work	3633	23278	2910	80.1	78.77	81.37	12.5	12.08	12.93	false	true
+gemma	corrected	Elsevier	SDG-09	work	1004	53922	882	87.85	85.68	89.73	1.64	1.53	1.75	false	true
+gemma	corrected	Elsevier	SDG-10	work	1246	15432	831	66.69	64.03	69.26	5.38	5.04	5.75	false	true
+gemma	corrected	Elsevier	SDG-11	work	3168	20030	2742	86.55	85.32	87.7	13.69	13.22	14.17	false	true
+gemma	corrected	Elsevier	SDG-12	work	2338	21626	1802	77.07	75.33	78.73	8.33	7.97	8.71	false	true
+gemma	corrected	Elsevier	SDG-13	work	4166	10793	3241	77.8	76.51	79.03	30.03	29.17	30.9	false	true
+gemma	corrected	Elsevier	SDG-14	work	516	5210	466	90.31	87.45	92.57	8.94	8.2	9.75	false	true
+gemma	corrected	Elsevier	SDG-15	work	2130	12900	1593	74.79	72.9	76.59	12.35	11.79	12.93	false	true
+gemma	corrected	Elsevier	SDG-16	work	4477	17547	3647	81.46	80.3	82.57	20.78	20.19	21.39	false	true
+gemma	corrected	Elsevier	SDG-17	work	0	3433	0							true	false
+gemma	corrected	Elsevier	all	work-goal pair	77477	382131	67063	86.56	86.32	86.8	17.55	17.43	17.67	false	true
+gemma	corrected	Elsevier	any	work, any goal	67698	234096	65830	97.24	97.11	97.36	28.12	27.94	28.3	false	true
+gemma	corrected	SIRIS	SDG-01	work	2056	4923	1270	61.77	59.65	63.85	25.8	24.59	27.04	false	true
+gemma	corrected	SIRIS	SDG-02	work	3313	17591	2744	82.83	81.5	84.07	15.6	15.07	16.14	false	true
+gemma	corrected	SIRIS	SDG-03	work	9391	119240	8150	86.79	86.09	87.46	6.83	6.69	6.98	false	true
+gemma	corrected	SIRIS	SDG-04	work	2657	21313	2124	79.94	78.37	81.42	9.97	9.57	10.38	false	true
+gemma	corrected	SIRIS	SDG-05	work	1543	5662	1243	80.56	78.51	82.46	21.95	20.89	23.05	false	true
+gemma	corrected	SIRIS	SDG-06	work	4049	10336	3497	86.37	85.28	87.39	33.83	32.93	34.75	false	true
+gemma	corrected	SIRIS	SDG-07	work	8130	18895	6493	79.86	78.98	80.72	34.36	33.69	35.04	false	true
+gemma	corrected	SIRIS	SDG-08	work	4374	23278	2181	49.86	48.38	51.34	9.37	9.0	9.75	false	true
+gemma	corrected	SIRIS	SDG-09	work	4296	53922	2568	59.78	58.3	61.23	4.76	4.59	4.95	false	true
+gemma	corrected	SIRIS	SDG-10	work	5202	15432	2450	47.1	45.74	48.46	15.88	15.31	16.46	false	true
+gemma	corrected	SIRIS	SDG-11	work	6296	20030	4111	65.3	64.11	66.46	20.52	19.97	21.09	false	true
+gemma	corrected	SIRIS	SDG-12	work	3761	21626	2950	78.44	77.09	79.72	13.64	13.19	14.1	false	true
+gemma	corrected	SIRIS	SDG-13	work	6219	10793	4040	64.96	63.77	66.14	37.43	36.52	38.35	false	true
+gemma	corrected	SIRIS	SDG-14	work	1739	5210	1188	68.32	66.09	70.46	22.8	21.68	23.96	false	true
+gemma	corrected	SIRIS	SDG-15	work	4488	12900	3395	75.65	74.37	76.88	26.32	25.57	27.08	false	true
+gemma	corrected	SIRIS	SDG-16	work	4631	17547	3053	65.93	64.55	67.28	17.4	16.85	17.97	false	true
+gemma	corrected	SIRIS	SDG-17	work	0	3433	0							true	false
+gemma	corrected	SIRIS	all	work-goal pair	72145	382131	51457	71.32	70.99	71.65	13.47	13.36	13.57	false	true
+gemma	corrected	SIRIS	any	work, any goal	51412	234096	49113	95.53	95.35	95.7	20.98	20.82	21.15	false	true
+gemma	corrected	Auckland	SDG-01	work	1964	4923	1127	57.38	55.18	59.55	22.89	21.74	24.09	false	true
+gemma	corrected	Auckland	SDG-02	work	8246	17591	5169	62.68	61.64	63.72	29.38	28.72	30.06	false	true
+gemma	corrected	Auckland	SDG-03	work	70538	119240	63601	90.17	89.94	90.38	53.34	53.06	53.62	false	true
+gemma	corrected	Auckland	SDG-04	work	14251	21313	10968	76.96	76.26	77.65	51.46	50.79	52.13	false	true
+gemma	corrected	Auckland	SDG-05	work	2529	5662	1710	67.62	65.77	69.41	30.2	29.02	31.41	false	true
+gemma	corrected	Auckland	SDG-06	work	5927	10336	4775	80.56	79.54	81.55	46.2	45.24	47.16	false	true
+gemma	corrected	Auckland	SDG-07	work	9829	18895	8214	83.57	82.82	84.29	43.47	42.77	44.18	false	true
+gemma	corrected	Auckland	SDG-08	work	6180	23278	4862	78.67	77.63	79.68	20.89	20.37	21.41	false	true
+gemma	corrected	Auckland	SDG-09	work	7088	53922	4906	69.22	68.13	70.28	9.1	8.86	9.34	false	true
+gemma	corrected	Auckland	SDG-10	work	8192	15432	3502	42.75	41.68	43.82	22.69	22.04	23.36	false	true
+gemma	corrected	Auckland	SDG-11	work	11699	20030	6386	54.59	53.68	55.49	31.88	31.24	32.53	false	true
+gemma	corrected	Auckland	SDG-12	work	7111	21626	4382	61.62	60.49	62.75	20.26	19.73	20.8	false	true
+gemma	corrected	Auckland	SDG-13	work	6345	10793	5057	79.7	78.69	80.67	46.85	45.91	47.8	false	true
+gemma	corrected	Auckland	SDG-14	work	4528	5210	2556	56.45	55.0	57.89	49.06	47.7	50.42	false	true
+gemma	corrected	Auckland	SDG-15	work	10217	12900	5476	53.6	52.63	54.56	42.45	41.6	43.3	false	true
+gemma	corrected	Auckland	SDG-16	work	6344	17547	4697	74.04	72.95	75.1	26.77	26.12	27.43	false	true
+gemma	corrected	Auckland	SDG-17	work	0	3433	0							true	false
+gemma	corrected	Auckland	all	work-goal pair	180988	382131	137388	75.91	75.71	76.11	35.95	35.8	36.11	false	true
+gemma	corrected	Auckland	any	work, any goal	133231	234096	127084	95.39	95.27	95.5	54.29	54.09	54.49	false	true
+gemma	corrected	union	SDG-01	work	5088	4923	1758	34.55	33.26	35.87	35.71	34.38	37.06	false	true
+gemma	corrected	union	SDG-02	work	9855	17591	6300	63.93	62.97	64.87	35.81	35.11	36.53	false	true
+gemma	corrected	union	SDG-03	work	72911	119240	65047	89.21	88.99	89.44	54.55	54.27	54.83	false	true
+gemma	corrected	union	SDG-04	work	15500	21313	11546	74.49	73.8	75.17	54.17	53.5	54.84	false	true
+gemma	corrected	union	SDG-05	work	2969	5662	2011	67.73	66.03	69.39	35.52	34.28	36.77	false	true
+gemma	corrected	union	SDG-06	work	6472	10336	5113	79.0	77.99	79.98	49.47	48.5	50.43	false	true
+gemma	corrected	union	SDG-07	work	12715	18895	9755	76.72	75.98	77.45	51.63	50.91	52.34	false	true
+gemma	corrected	union	SDG-08	work	9181	23278	5804	63.22	62.23	64.2	24.93	24.38	25.49	false	true
+gemma	corrected	union	SDG-09	work	10479	53922	6680	63.75	62.82	64.66	12.39	12.11	12.67	false	true
+gemma	corrected	union	SDG-10	work	11524	15432	4583	39.77	38.88	40.67	29.7	28.98	30.42	false	true
+gemma	corrected	union	SDG-11	work	15159	20030	7976	52.62	51.82	53.41	39.82	39.14	40.5	false	true
+gemma	corrected	union	SDG-12	work	9645	21626	6006	62.27	61.3	63.23	27.77	27.18	28.37	false	true
+gemma	corrected	union	SDG-13	work	9588	10793	5882	61.35	60.37	62.32	54.5	53.56	55.44	false	true
+gemma	corrected	union	SDG-14	work	5432	5210	2952	54.34	53.02	55.67	56.66	55.31	58.0	false	true
+gemma	corrected	union	SDG-15	work	12839	12900	6623	51.59	50.72	52.45	51.34	50.48	52.2	false	true
+gemma	corrected	union	SDG-16	work	9158	17547	6068	66.26	65.28	67.22	34.58	33.88	35.29	false	true
+gemma	corrected	union	SDG-17	work	846	3433	388	45.86	42.53	49.23	11.3	10.29	12.4	false	true
+gemma	corrected	union	all	work-goal pair	219361	382131	154492	70.43	70.24	70.62	40.43	40.27	40.58	false	true
+gemma	corrected	union	any	work, any goal	144617	234096	136857	94.63	94.52	94.75	58.46	58.26	58.66	false	true
+gemma	compatible	Aurora	SDG-01	work	1105	4923	720	65.16	62.3	67.91	14.63	13.67	15.64	false	true
+gemma	compatible	Aurora	SDG-02	work	691	17591	648	93.78	91.72	95.35	3.68	3.42	3.97	false	true
+gemma	compatible	Aurora	SDG-03	work	5987	119240	4309	71.97	70.82	73.1	3.61	3.51	3.72	false	true
+gemma	compatible	Aurora	SDG-04	work	1831	21313	1344	73.4	71.33	75.38	6.31	5.99	6.64	false	true
+gemma	compatible	Aurora	SDG-05	work	517	5662	450	87.04	83.87	89.66	7.95	7.27	8.68	false	true
+gemma	compatible	Aurora	SDG-06	work	1658	10336	1487	89.69	88.13	91.06	14.39	13.72	15.08	false	true
+gemma	compatible	Aurora	SDG-07	work	1483	18895	1297	87.46	85.67	89.05	6.86	6.51	7.23	false	true
+gemma	compatible	Aurora	SDG-08	work	873	23278	769	88.09	85.77	90.07	3.3	3.08	3.54	false	true
+gemma	compatible	Aurora	SDG-09	work	533	53922	395	74.11	70.23	77.65	0.73	0.66	0.81	false	true
+gemma	compatible	Aurora	SDG-10	work	348	15432	289	83.05	78.75	86.62	1.87	1.67	2.1	false	true
+gemma	compatible	Aurora	SDG-11	work	1947	20030	1637	84.08	82.39	85.64	8.17	7.8	8.56	false	true
+gemma	compatible	Aurora	SDG-12	work	1793	21626	1446	80.65	78.75	82.41	6.69	6.36	7.03	false	true
+gemma	compatible	Aurora	SDG-13	work	5484	10793	4023	73.36	72.17	74.51	37.27	36.37	38.19	false	true
+gemma	compatible	Aurora	SDG-14	work	1998	5210	1441	72.12	70.11	74.04	27.66	26.46	28.89	false	true
+gemma	compatible	Aurora	SDG-15	work	1662	12900	954	57.4	55.01	59.76	7.4	6.96	7.86	false	true
+gemma	compatible	Aurora	SDG-16	work	1476	17547	1245	84.35	82.41	86.11	7.1	6.72	7.48	false	true
+gemma	compatible	Aurora	SDG-17	work	846	3433	388	45.86	42.53	49.23	11.3	10.29	12.4	false	true
+gemma	compatible	Aurora	all	work-goal pair	30232	382131	22842	75.56	75.07	76.04	5.98	5.9	6.05	false	true
+gemma	compatible	Aurora	any	work, any goal	25349	234096	24519	96.73	96.5	96.94	10.47	10.35	10.6	false	true
+gemma	compatible	Elsevier	SDG-01	work	2623	4923	594	22.65	21.08	24.29	12.07	11.19	13.01	false	true
+gemma	compatible	Elsevier	SDG-02	work	2555	17591	2237	87.55	86.22	88.78	12.72	12.23	13.22	false	true
+gemma	compatible	Elsevier	SDG-03	work	39651	119240	37723	95.14	94.92	95.34	31.64	31.37	31.9	false	true
+gemma	compatible	Elsevier	SDG-04	work	973	21313	878	90.24	88.21	91.95	4.12	3.86	4.39	false	true
+gemma	compatible	Elsevier	SDG-05	work	1133	5662	905	79.88	77.44	82.11	15.98	15.05	16.96	false	true
+gemma	compatible	Elsevier	SDG-06	work	1443	10336	1374	95.22	93.99	96.2	13.29	12.65	13.96	false	true
+gemma	compatible	Elsevier	SDG-07	work	6421	18895	5238	81.58	80.61	82.51	27.72	27.09	28.36	false	true
+gemma	compatible	Elsevier	SDG-08	work	3633	23278	2910	80.1	78.77	81.37	12.5	12.08	12.93	false	true
+gemma	compatible	Elsevier	SDG-09	work	1004	53922	882	87.85	85.68	89.73	1.64	1.53	1.75	false	true
+gemma	compatible	Elsevier	SDG-10	work	1246	15432	831	66.69	64.03	69.26	5.38	5.04	5.75	false	true
+gemma	compatible	Elsevier	SDG-11	work	3168	20030	2742	86.55	85.32	87.7	13.69	13.22	14.17	false	true
+gemma	compatible	Elsevier	SDG-12	work	2338	21626	1802	77.07	75.33	78.73	8.33	7.97	8.71	false	true
+gemma	compatible	Elsevier	SDG-13	work	4166	10793	3241	77.8	76.51	79.03	30.03	29.17	30.9	false	true
+gemma	compatible	Elsevier	SDG-14	work	516	5210	466	90.31	87.45	92.57	8.94	8.2	9.75	false	true
+gemma	compatible	Elsevier	SDG-15	work	2130	12900	1593	74.79	72.9	76.59	12.35	11.79	12.93	false	true
+gemma	compatible	Elsevier	SDG-16	work	4477	17547	3647	81.46	80.3	82.57	20.78	20.19	21.39	false	true
+gemma	compatible	Elsevier	SDG-17	work	0	3433	0							true	false
+gemma	compatible	Elsevier	all	work-goal pair	77477	382131	67063	86.56	86.32	86.8	17.55	17.43	17.67	false	true
+gemma	compatible	Elsevier	any	work, any goal	67698	234096	65830	97.24	97.11	97.36	28.12	27.94	28.3	false	true
+gemma	compatible	SIRIS	SDG-01	work	2056	4923	1270	61.77	59.65	63.85	25.8	24.59	27.04	false	true
+gemma	compatible	SIRIS	SDG-02	work	3313	17591	2744	82.83	81.5	84.07	15.6	15.07	16.14	false	true
+gemma	compatible	SIRIS	SDG-03	work	9391	119240	8150	86.79	86.09	87.46	6.83	6.69	6.98	false	true
+gemma	compatible	SIRIS	SDG-04	work	2657	21313	2124	79.94	78.37	81.42	9.97	9.57	10.38	false	true
+gemma	compatible	SIRIS	SDG-05	work	1543	5662	1243	80.56	78.51	82.46	21.95	20.89	23.05	false	true
+gemma	compatible	SIRIS	SDG-06	work	4049	10336	3497	86.37	85.28	87.39	33.83	32.93	34.75	false	true
+gemma	compatible	SIRIS	SDG-07	work	8130	18895	6493	79.86	78.98	80.72	34.36	33.69	35.04	false	true
+gemma	compatible	SIRIS	SDG-08	work	4374	23278	2181	49.86	48.38	51.34	9.37	9.0	9.75	false	true
+gemma	compatible	SIRIS	SDG-09	work	4296	53922	2568	59.78	58.3	61.23	4.76	4.59	4.95	false	true
+gemma	compatible	SIRIS	SDG-10	work	5202	15432	2450	47.1	45.74	48.46	15.88	15.31	16.46	false	true
+gemma	compatible	SIRIS	SDG-11	work	6296	20030	4111	65.3	64.11	66.46	20.52	19.97	21.09	false	true
+gemma	compatible	SIRIS	SDG-12	work	3761	21626	2950	78.44	77.09	79.72	13.64	13.19	14.1	false	true
+gemma	compatible	SIRIS	SDG-13	work	6219	10793	4040	64.96	63.77	66.14	37.43	36.52	38.35	false	true
+gemma	compatible	SIRIS	SDG-14	work	1739	5210	1188	68.32	66.09	70.46	22.8	21.68	23.96	false	true
+gemma	compatible	SIRIS	SDG-15	work	4488	12900	3395	75.65	74.37	76.88	26.32	25.57	27.08	false	true
+gemma	compatible	SIRIS	SDG-16	work	4631	17547	3053	65.93	64.55	67.28	17.4	16.85	17.97	false	true
+gemma	compatible	SIRIS	SDG-17	work	0	3433	0							true	false
+gemma	compatible	SIRIS	all	work-goal pair	72145	382131	51457	71.32	70.99	71.65	13.47	13.36	13.57	false	true
+gemma	compatible	SIRIS	any	work, any goal	51412	234096	49113	95.53	95.35	95.7	20.98	20.82	21.15	false	true
+gemma	compatible	Auckland	SDG-01	work	1964	4923	1127	57.38	55.18	59.55	22.89	21.74	24.09	false	true
+gemma	compatible	Auckland	SDG-02	work	8246	17591	5169	62.68	61.64	63.72	29.38	28.72	30.06	false	true
+gemma	compatible	Auckland	SDG-03	work	70538	119240	63601	90.17	89.94	90.38	53.34	53.06	53.62	false	true
+gemma	compatible	Auckland	SDG-04	work	14251	21313	10968	76.96	76.26	77.65	51.46	50.79	52.13	false	true
+gemma	compatible	Auckland	SDG-05	work	2529	5662	1710	67.62	65.77	69.41	30.2	29.02	31.41	false	true
+gemma	compatible	Auckland	SDG-06	work	5927	10336	4775	80.56	79.54	81.55	46.2	45.24	47.16	false	true
+gemma	compatible	Auckland	SDG-07	work	9829	18895	8214	83.57	82.82	84.29	43.47	42.77	44.18	false	true
+gemma	compatible	Auckland	SDG-08	work	6180	23278	4862	78.67	77.63	79.68	20.89	20.37	21.41	false	true
+gemma	compatible	Auckland	SDG-09	work	7088	53922	4906	69.22	68.13	70.28	9.1	8.86	9.34	false	true
+gemma	compatible	Auckland	SDG-10	work	8192	15432	3502	42.75	41.68	43.82	22.69	22.04	23.36	false	true
+gemma	compatible	Auckland	SDG-11	work	11699	20030	6386	54.59	53.68	55.49	31.88	31.24	32.53	false	true
+gemma	compatible	Auckland	SDG-12	work	7111	21626	4382	61.62	60.49	62.75	20.26	19.73	20.8	false	true
+gemma	compatible	Auckland	SDG-13	work	6345	10793	5057	79.7	78.69	80.67	46.85	45.91	47.8	false	true
+gemma	compatible	Auckland	SDG-14	work	4528	5210	2556	56.45	55.0	57.89	49.06	47.7	50.42	false	true
+gemma	compatible	Auckland	SDG-15	work	10217	12900	5476	53.6	52.63	54.56	42.45	41.6	43.3	false	true
+gemma	compatible	Auckland	SDG-16	work	6344	17547	4697	74.04	72.95	75.1	26.77	26.12	27.43	false	true
+gemma	compatible	Auckland	SDG-17	work	0	3433	0							true	false
+gemma	compatible	Auckland	all	work-goal pair	180988	382131	137388	75.91	75.71	76.11	35.95	35.8	36.11	false	true
+gemma	compatible	Auckland	any	work, any goal	133231	234096	127084	95.39	95.27	95.5	54.29	54.09	54.49	false	true
+gemma	compatible	union	SDG-01	work	5089	4923	1758	34.55	33.25	35.86	35.71	34.38	37.06	false	true
+gemma	compatible	union	SDG-02	work	9839	17591	6287	63.9	62.94	64.84	35.74	35.03	36.45	false	true
+gemma	compatible	union	SDG-03	work	72964	119240	65085	89.2	88.97	89.42	54.58	54.3	54.87	false	true
+gemma	compatible	union	SDG-04	work	15501	21313	11547	74.49	73.8	75.17	54.18	53.51	54.85	false	true
+gemma	compatible	union	SDG-05	work	2969	5662	2011	67.73	66.03	69.39	35.52	34.28	36.77	false	true
+gemma	compatible	union	SDG-06	work	6535	10336	5135	78.58	77.57	79.55	49.68	48.72	50.64	false	true
+gemma	compatible	union	SDG-07	work	12765	18895	9783	76.64	75.9	77.37	51.78	51.06	52.49	false	true
+gemma	compatible	union	SDG-08	work	9181	23278	5804	63.22	62.23	64.2	24.93	24.38	25.49	false	true
+gemma	compatible	union	SDG-09	work	10481	53922	6682	63.75	62.83	64.67	12.39	12.12	12.67	false	true
+gemma	compatible	union	SDG-10	work	11527	15432	4586	39.78	38.89	40.68	29.72	29.0	30.44	false	true
+gemma	compatible	union	SDG-11	work	15245	20030	8000	52.48	51.68	53.27	39.94	39.26	40.62	false	true
+gemma	compatible	union	SDG-12	work	9650	21626	6009	62.27	61.3	63.23	27.79	27.19	28.39	false	true
+gemma	compatible	union	SDG-13	work	9599	10793	5885	61.31	60.33	62.28	54.53	53.59	55.46	false	true
+gemma	compatible	union	SDG-14	work	5432	5210	2952	54.34	53.02	55.67	56.66	55.31	58.0	false	true
+gemma	compatible	union	SDG-15	work	12848	12900	6628	51.59	50.72	52.45	51.38	50.52	52.24	false	true
+gemma	compatible	union	SDG-16	work	9163	17547	6068	66.22	65.25	67.18	34.58	33.88	35.29	false	true
+gemma	compatible	union	SDG-17	work	846	3433	388	45.86	42.53	49.23	11.3	10.29	12.4	false	true
+gemma	compatible	union	all	work-goal pair	219634	382131	154608	70.39	70.2	70.58	40.46	40.3	40.62	false	true
+gemma	compatible	union	any	work, any goal	144711	234096	136936	94.63	94.51	94.74	58.5	58.3	58.7	false	true
+intersection	corrected	Aurora	SDG-01	work	1103	858	350	31.73	29.05	34.54	40.79	37.55	44.11	false	true
+intersection	corrected	Aurora	SDG-02	work	740	5995	529	71.49	68.13	74.62	8.82	8.13	9.57	false	true
+intersection	corrected	Aurora	SDG-03	work	5592	93457	3245	58.03	56.73	59.32	3.47	3.36	3.59	false	true
+intersection	corrected	Aurora	SDG-04	work	1826	14199	1045	57.23	54.95	59.48	7.36	6.94	7.8	false	true
+intersection	corrected	Aurora	SDG-05	work	517	2234	354	68.47	64.34	72.33	15.85	14.39	17.42	false	true
+intersection	corrected	Aurora	SDG-06	work	1453	5306	1117	76.88	74.64	78.97	21.05	19.98	22.17	false	true
+intersection	corrected	Aurora	SDG-07	work	687	8715	419	60.99	57.29	64.57	4.81	4.38	5.28	false	true
+intersection	corrected	Aurora	SDG-08	work	809	6939	507	62.67	59.28	65.94	7.31	6.72	7.94	false	true
+intersection	corrected	Aurora	SDG-09	work	530	8360	170	32.08	28.24	36.17	2.03	1.75	2.36	false	true
+intersection	corrected	Aurora	SDG-10	work	333	3500	172	51.65	46.3	56.97	4.91	4.25	5.68	false	true
+intersection	corrected	Aurora	SDG-11	work	1700	6283	1091	64.18	61.87	66.42	17.36	16.45	18.32	false	true
+intersection	corrected	Aurora	SDG-12	work	1764	3575	603	34.18	32.01	36.43	16.87	15.68	18.13	false	true
+intersection	corrected	Aurora	SDG-13	work	5472	2999	1839	33.61	32.37	34.87	61.32	59.56	63.05	false	true
+intersection	corrected	Aurora	SDG-14	work	1998	2318	1052	52.65	50.46	54.83	45.38	43.37	47.42	false	true
+intersection	corrected	Aurora	SDG-15	work	1620	3919	572	35.31	33.02	37.67	14.6	13.52	15.74	false	true
+intersection	corrected	Aurora	SDG-16	work	1468	5217	806	54.9	52.35	57.43	15.45	14.49	16.46	false	true
+intersection	corrected	Aurora	SDG-17	work	846	322	98	11.58	9.6	13.92	30.43	25.66	35.67	false	true
+intersection	corrected	Aurora	all	work-goal pair	28458	174196	13969	49.09	48.51	49.67	8.02	7.89	8.15	false	true
+intersection	corrected	Aurora	any	work, any goal	24069	158083	19332	80.32	79.81	80.82	12.23	12.07	12.39	false	true
+intersection	corrected	Elsevier	SDG-01	work	2623	858	262	9.99	8.9	11.2	30.54	27.55	33.7	false	true
+intersection	corrected	Elsevier	SDG-02	work	2555	5995	1551	60.7	58.8	62.58	25.87	24.78	27.0	false	true
+intersection	corrected	Elsevier	SDG-03	work	39651	93457	34243	86.36	86.02	86.7	36.64	36.33	36.95	false	true
+intersection	corrected	Elsevier	SDG-04	work	973	14199	780	80.16	77.54	82.55	5.49	5.13	5.88	false	true
+intersection	corrected	Elsevier	SDG-05	work	1133	2234	714	63.02	60.17	65.78	31.96	30.06	33.92	false	true
+intersection	corrected	Elsevier	SDG-06	work	1443	5306	1201	83.23	81.21	85.07	22.63	21.53	23.78	false	true
+intersection	corrected	Elsevier	SDG-07	work	6421	8715	3692	57.5	56.29	58.7	42.36	41.33	43.4	false	true
+intersection	corrected	Elsevier	SDG-08	work	3633	6939	1750	48.17	46.55	49.8	25.22	24.21	26.26	false	true
+intersection	corrected	Elsevier	SDG-09	work	1004	8360	388	38.65	35.68	41.7	4.64	4.21	5.11	false	true
+intersection	corrected	Elsevier	SDG-10	work	1246	3500	444	35.63	33.02	38.33	12.69	11.62	13.83	false	true
+intersection	corrected	Elsevier	SDG-11	work	3168	6283	1950	61.55	59.85	63.23	31.04	29.9	32.19	false	true
+intersection	corrected	Elsevier	SDG-12	work	2338	3575	950	40.63	38.66	42.64	26.57	25.15	28.05	false	true
+intersection	corrected	Elsevier	SDG-13	work	4166	2999	1530	36.73	35.27	38.2	51.02	49.23	52.8	false	true
+intersection	corrected	Elsevier	SDG-14	work	516	2318	382	74.03	70.08	77.63	16.48	15.03	18.05	false	true
+intersection	corrected	Elsevier	SDG-15	work	2130	3919	802	37.65	35.62	39.73	20.46	19.23	21.76	false	true
+intersection	corrected	Elsevier	SDG-16	work	4477	5217	2236	49.94	48.48	51.41	42.86	41.52	44.21	false	true
+intersection	corrected	Elsevier	SDG-17	work	0	322	0							true	false
+intersection	corrected	Elsevier	all	work-goal pair	77477	174196	52875	68.25	67.92	68.57	30.35	30.14	30.57	false	true
+intersection	corrected	Elsevier	any	work, any goal	67698	158083	57027	84.24	83.96	84.51	36.07	35.84	36.31	false	true
+intersection	corrected	SIRIS	SDG-01	work	2056	858	532	25.88	24.03	27.81	62.0	58.71	65.19	false	true
+intersection	corrected	SIRIS	SDG-02	work	3313	5995	1698	51.25	49.55	52.95	28.32	27.2	29.48	false	true
+intersection	corrected	SIRIS	SDG-03	work	9391	93457	7000	74.54	73.65	75.41	7.49	7.32	7.66	false	true
+intersection	corrected	SIRIS	SDG-04	work	2657	14199	1811	68.16	66.36	69.9	12.75	12.22	13.31	false	true
+intersection	corrected	SIRIS	SDG-05	work	1543	2234	879	56.97	54.48	59.42	39.35	37.34	41.39	false	true
+intersection	corrected	SIRIS	SDG-06	work	4049	5306	2723	67.25	65.79	68.68	51.32	49.97	52.66	false	true
+intersection	corrected	SIRIS	SDG-07	work	8130	8715	4675	57.5	56.43	58.57	53.64	52.59	54.69	false	true
+intersection	corrected	SIRIS	SDG-08	work	4374	6939	1099	25.13	23.86	26.43	15.84	15.0	16.72	false	true
+intersection	corrected	SIRIS	SDG-09	work	4296	8360	756	17.6	16.49	18.77	9.04	8.45	9.68	false	true
+intersection	corrected	SIRIS	SDG-10	work	5202	3500	1048	20.15	19.08	21.26	29.94	28.45	31.48	false	true
+intersection	corrected	SIRIS	SDG-11	work	6296	6283	2534	40.25	39.04	41.46	40.33	39.12	41.55	false	true
+intersection	corrected	SIRIS	SDG-12	work	3761	3575	1498	39.83	38.28	41.4	41.9	40.29	43.53	false	true
+intersection	corrected	SIRIS	SDG-13	work	6219	2999	1945	31.28	30.13	32.44	64.85	63.13	66.54	false	true
+intersection	corrected	SIRIS	SDG-14	work	1739	2318	839	48.25	45.9	50.6	36.19	34.26	38.17	false	true
+intersection	corrected	SIRIS	SDG-15	work	4488	3919	1997	44.5	43.05	45.95	50.96	49.39	52.52	false	true
+intersection	corrected	SIRIS	SDG-16	work	4631	5217	1631	35.22	33.86	36.61	31.26	30.02	32.53	false	true
+intersection	corrected	SIRIS	SDG-17	work	0	322	0							true	false
+intersection	corrected	SIRIS	all	work-goal pair	72145	174196	32665	45.28	44.91	45.64	18.75	18.57	18.94	false	true
+intersection	corrected	SIRIS	any	work, any goal	51412	158083	39268	76.38	76.01	76.74	24.84	24.63	25.05	false	true
+intersection	corrected	Auckland	SDG-01	work	1964	858	495	25.2	23.33	27.17	57.69	54.36	60.96	false	true
+intersection	corrected	Auckland	SDG-02	work	8246	5995	3086	37.42	36.39	38.47	51.48	50.21	52.74	false	true
+intersection	corrected	Auckland	SDG-03	work	70538	93457	56836	80.58	80.28	80.87	60.82	60.5	61.13	false	true
+intersection	corrected	Auckland	SDG-04	work	14251	14199	9241	64.84	64.06	65.62	65.08	64.29	65.86	false	true
+intersection	corrected	Auckland	SDG-05	work	2529	2234	1176	46.5	44.56	48.45	52.64	50.57	54.71	false	true
+intersection	corrected	Auckland	SDG-06	work	5927	5306	3533	59.61	58.35	60.85	66.58	65.3	67.84	false	true
+intersection	corrected	Auckland	SDG-07	work	9829	8715	5531	56.27	55.29	57.25	63.47	62.45	64.47	false	true
+intersection	corrected	Auckland	SDG-08	work	6180	6939	2888	46.73	45.49	47.98	41.62	40.46	42.78	false	true
+intersection	corrected	Auckland	SDG-09	work	7088	8360	1911	26.96	25.94	28.01	22.86	21.97	23.77	false	true
+intersection	corrected	Auckland	SDG-10	work	8192	3500	1387	16.93	16.13	17.76	39.63	38.02	41.26	false	true
+intersection	corrected	Auckland	SDG-11	work	11699	6283	3378	28.87	28.06	29.7	53.76	52.53	54.99	false	true
+intersection	corrected	Auckland	SDG-12	work	7111	3575	1550	21.8	20.85	22.77	43.36	41.74	44.99	false	true
+intersection	corrected	Auckland	SDG-13	work	6345	2999	2385	37.59	36.4	38.79	79.53	78.05	80.93	false	true
+intersection	corrected	Auckland	SDG-14	work	4528	2318	1521	33.59	32.23	34.98	65.62	63.66	67.52	false	true
+intersection	corrected	Auckland	SDG-15	work	10217	3919	2847	27.87	27.0	28.74	72.65	71.23	74.02	false	true
+intersection	corrected	Auckland	SDG-16	work	6344	5217	2680	42.24	41.03	43.46	51.37	50.01	52.73	false	true
+intersection	corrected	Auckland	SDG-17	work	0	322	0							true	false
+intersection	corrected	Auckland	all	work-goal pair	180988	174196	100445	55.5	55.27	55.73	57.66	57.43	57.89	false	true
+intersection	corrected	Auckland	any	work, any goal	133231	158083	103983	78.05	77.82	78.27	65.78	65.54	66.01	false	true
+intersection	corrected	union	SDG-01	work	5088	858	611	12.01	11.14	12.93	71.21	68.09	74.14	false	true
+intersection	corrected	union	SDG-02	work	9855	5995	3549	36.01	35.07	36.97	59.2	57.95	60.44	false	true
+intersection	corrected	union	SDG-03	work	72911	93457	57800	79.27	78.98	79.57	61.85	61.53	62.16	false	true
+intersection	corrected	union	SDG-04	work	15500	14199	9576	61.78	61.01	62.54	67.44	66.67	68.21	false	true
+intersection	corrected	union	SDG-05	work	2969	2234	1336	45.0	43.22	46.79	59.8	57.75	61.82	false	true
+intersection	corrected	union	SDG-06	work	6472	5306	3720	57.48	56.27	58.68	70.11	68.86	71.33	false	true
+intersection	corrected	union	SDG-07	work	12715	8715	6321	49.71	48.84	50.58	72.53	71.58	73.46	false	true
+intersection	corrected	union	SDG-08	work	9181	6939	3178	34.61	33.65	35.59	45.8	44.63	46.97	false	true
+intersection	corrected	union	SDG-09	work	10479	8360	2294	21.89	21.11	22.69	27.44	26.49	28.41	false	true
+intersection	corrected	union	SDG-10	work	11524	3500	1757	15.25	14.6	15.91	50.2	48.54	51.86	false	true
+intersection	corrected	union	SDG-11	work	15159	6283	4067	26.83	26.13	27.54	64.73	63.54	65.9	false	true
+intersection	corrected	union	SDG-12	work	9645	3575	2078	21.54	20.74	22.38	58.13	56.5	59.73	false	true
+intersection	corrected	union	SDG-13	work	9588	2999	2537	26.46	25.59	27.35	84.59	83.26	85.84	false	true
+intersection	corrected	union	SDG-14	work	5432	2318	1726	31.77	30.55	33.03	74.46	72.65	76.19	false	true
+intersection	corrected	union	SDG-15	work	12839	3919	3159	24.6	23.87	25.36	80.61	79.34	81.81	false	true
+intersection	corrected	union	SDG-16	work	9158	5217	3142	34.31	33.34	35.29	60.23	58.89	61.55	false	true
+intersection	corrected	union	SDG-17	work	846	322	98	11.58	9.6	13.92	30.43	25.66	35.67	false	true
+intersection	corrected	union	all	work-goal pair	219361	174196	106949	48.75	48.55	48.96	61.4	61.17	61.62	false	true
+intersection	corrected	union	any	work, any goal	144617	158083	109524	75.73	75.51	75.95	69.28	69.05	69.51	false	true
+intersection	compatible	Aurora	SDG-01	work	1105	858	350	31.67	29.0	34.48	40.79	37.55	44.11	false	true
+intersection	compatible	Aurora	SDG-02	work	691	5995	509	73.66	70.25	76.81	8.49	7.81	9.22	false	true
+intersection	compatible	Aurora	SDG-03	work	5987	93457	3571	59.65	58.4	60.88	3.82	3.7	3.95	false	true
+intersection	compatible	Aurora	SDG-04	work	1831	14199	1050	57.35	55.07	59.59	7.39	6.98	7.84	false	true
+intersection	compatible	Aurora	SDG-05	work	517	2234	354	68.47	64.34	72.33	15.85	14.39	17.42	false	true
+intersection	compatible	Aurora	SDG-06	work	1658	5306	1203	72.56	70.36	74.65	22.67	21.57	23.82	false	true
+intersection	compatible	Aurora	SDG-07	work	1483	8715	990	66.76	64.32	69.11	11.36	10.71	12.04	false	true
+intersection	compatible	Aurora	SDG-08	work	873	6939	550	63.0	59.75	66.14	7.93	7.31	8.59	false	true
+intersection	compatible	Aurora	SDG-09	work	533	8360	172	32.27	28.44	36.35	2.06	1.77	2.38	false	true
+intersection	compatible	Aurora	SDG-10	work	348	3500	182	52.3	47.05	57.49	5.2	4.51	5.99	false	true
+intersection	compatible	Aurora	SDG-11	work	1947	6283	1215	62.4	60.23	64.53	19.34	18.38	20.33	false	true
+intersection	compatible	Aurora	SDG-12	work	1793	3575	616	34.36	32.19	36.59	17.23	16.03	18.5	false	true
+intersection	compatible	Aurora	SDG-13	work	5484	2999	1839	33.53	32.3	34.79	61.32	59.56	63.05	false	true
+intersection	compatible	Aurora	SDG-14	work	1998	2318	1052	52.65	50.46	54.83	45.38	43.37	47.42	false	true
+intersection	compatible	Aurora	SDG-15	work	1662	3919	599	36.04	33.77	38.38	15.28	14.19	16.45	false	true
+intersection	compatible	Aurora	SDG-16	work	1476	5217	806	54.61	52.06	57.13	15.45	14.49	16.46	false	true
+intersection	compatible	Aurora	SDG-17	work	846	322	98	11.58	9.6	13.92	30.43	25.66	35.67	false	true
+intersection	compatible	Aurora	all	work-goal pair	30232	174196	15156	50.13	49.57	50.7	8.7	8.57	8.83	false	true
+intersection	compatible	Aurora	any	work, any goal	25349	158083	20424	80.57	80.08	81.05	12.92	12.76	13.09	false	true
+intersection	compatible	Elsevier	SDG-01	work	2623	858	262	9.99	8.9	11.2	30.54	27.55	33.7	false	true
+intersection	compatible	Elsevier	SDG-02	work	2555	5995	1551	60.7	58.8	62.58	25.87	24.78	27.0	false	true
+intersection	compatible	Elsevier	SDG-03	work	39651	93457	34243	86.36	86.02	86.7	36.64	36.33	36.95	false	true
+intersection	compatible	Elsevier	SDG-04	work	973	14199	780	80.16	77.54	82.55	5.49	5.13	5.88	false	true
+intersection	compatible	Elsevier	SDG-05	work	1133	2234	714	63.02	60.17	65.78	31.96	30.06	33.92	false	true
+intersection	compatible	Elsevier	SDG-06	work	1443	5306	1201	83.23	81.21	85.07	22.63	21.53	23.78	false	true
+intersection	compatible	Elsevier	SDG-07	work	6421	8715	3692	57.5	56.29	58.7	42.36	41.33	43.4	false	true
+intersection	compatible	Elsevier	SDG-08	work	3633	6939	1750	48.17	46.55	49.8	25.22	24.21	26.26	false	true
+intersection	compatible	Elsevier	SDG-09	work	1004	8360	388	38.65	35.68	41.7	4.64	4.21	5.11	false	true
+intersection	compatible	Elsevier	SDG-10	work	1246	3500	444	35.63	33.02	38.33	12.69	11.62	13.83	false	true
+intersection	compatible	Elsevier	SDG-11	work	3168	6283	1950	61.55	59.85	63.23	31.04	29.9	32.19	false	true
+intersection	compatible	Elsevier	SDG-12	work	2338	3575	950	40.63	38.66	42.64	26.57	25.15	28.05	false	true
+intersection	compatible	Elsevier	SDG-13	work	4166	2999	1530	36.73	35.27	38.2	51.02	49.23	52.8	false	true
+intersection	compatible	Elsevier	SDG-14	work	516	2318	382	74.03	70.08	77.63	16.48	15.03	18.05	false	true
+intersection	compatible	Elsevier	SDG-15	work	2130	3919	802	37.65	35.62	39.73	20.46	19.23	21.76	false	true
+intersection	compatible	Elsevier	SDG-16	work	4477	5217	2236	49.94	48.48	51.41	42.86	41.52	44.21	false	true
+intersection	compatible	Elsevier	SDG-17	work	0	322	0							true	false
+intersection	compatible	Elsevier	all	work-goal pair	77477	174196	52875	68.25	67.92	68.57	30.35	30.14	30.57	false	true
+intersection	compatible	Elsevier	any	work, any goal	67698	158083	57027	84.24	83.96	84.51	36.07	35.84	36.31	false	true
+intersection	compatible	SIRIS	SDG-01	work	2056	858	532	25.88	24.03	27.81	62.0	58.71	65.19	false	true
+intersection	compatible	SIRIS	SDG-02	work	3313	5995	1698	51.25	49.55	52.95	28.32	27.2	29.48	false	true
+intersection	compatible	SIRIS	SDG-03	work	9391	93457	7000	74.54	73.65	75.41	7.49	7.32	7.66	false	true
+intersection	compatible	SIRIS	SDG-04	work	2657	14199	1811	68.16	66.36	69.9	12.75	12.22	13.31	false	true
+intersection	compatible	SIRIS	SDG-05	work	1543	2234	879	56.97	54.48	59.42	39.35	37.34	41.39	false	true
+intersection	compatible	SIRIS	SDG-06	work	4049	5306	2723	67.25	65.79	68.68	51.32	49.97	52.66	false	true
+intersection	compatible	SIRIS	SDG-07	work	8130	8715	4675	57.5	56.43	58.57	53.64	52.59	54.69	false	true
+intersection	compatible	SIRIS	SDG-08	work	4374	6939	1099	25.13	23.86	26.43	15.84	15.0	16.72	false	true
+intersection	compatible	SIRIS	SDG-09	work	4296	8360	756	17.6	16.49	18.77	9.04	8.45	9.68	false	true
+intersection	compatible	SIRIS	SDG-10	work	5202	3500	1048	20.15	19.08	21.26	29.94	28.45	31.48	false	true
+intersection	compatible	SIRIS	SDG-11	work	6296	6283	2534	40.25	39.04	41.46	40.33	39.12	41.55	false	true
+intersection	compatible	SIRIS	SDG-12	work	3761	3575	1498	39.83	38.28	41.4	41.9	40.29	43.53	false	true
+intersection	compatible	SIRIS	SDG-13	work	6219	2999	1945	31.28	30.13	32.44	64.85	63.13	66.54	false	true
+intersection	compatible	SIRIS	SDG-14	work	1739	2318	839	48.25	45.9	50.6	36.19	34.26	38.17	false	true
+intersection	compatible	SIRIS	SDG-15	work	4488	3919	1997	44.5	43.05	45.95	50.96	49.39	52.52	false	true
+intersection	compatible	SIRIS	SDG-16	work	4631	5217	1631	35.22	33.86	36.61	31.26	30.02	32.53	false	true
+intersection	compatible	SIRIS	SDG-17	work	0	322	0							true	false
+intersection	compatible	SIRIS	all	work-goal pair	72145	174196	32665	45.28	44.91	45.64	18.75	18.57	18.94	false	true
+intersection	compatible	SIRIS	any	work, any goal	51412	158083	39268	76.38	76.01	76.74	24.84	24.63	25.05	false	true
+intersection	compatible	Auckland	SDG-01	work	1964	858	495	25.2	23.33	27.17	57.69	54.36	60.96	false	true
+intersection	compatible	Auckland	SDG-02	work	8246	5995	3086	37.42	36.39	38.47	51.48	50.21	52.74	false	true
+intersection	compatible	Auckland	SDG-03	work	70538	93457	56836	80.58	80.28	80.87	60.82	60.5	61.13	false	true
+intersection	compatible	Auckland	SDG-04	work	14251	14199	9241	64.84	64.06	65.62	65.08	64.29	65.86	false	true
+intersection	compatible	Auckland	SDG-05	work	2529	2234	1176	46.5	44.56	48.45	52.64	50.57	54.71	false	true
+intersection	compatible	Auckland	SDG-06	work	5927	5306	3533	59.61	58.35	60.85	66.58	65.3	67.84	false	true
+intersection	compatible	Auckland	SDG-07	work	9829	8715	5531	56.27	55.29	57.25	63.47	62.45	64.47	false	true
+intersection	compatible	Auckland	SDG-08	work	6180	6939	2888	46.73	45.49	47.98	41.62	40.46	42.78	false	true
+intersection	compatible	Auckland	SDG-09	work	7088	8360	1911	26.96	25.94	28.01	22.86	21.97	23.77	false	true
+intersection	compatible	Auckland	SDG-10	work	8192	3500	1387	16.93	16.13	17.76	39.63	38.02	41.26	false	true
+intersection	compatible	Auckland	SDG-11	work	11699	6283	3378	28.87	28.06	29.7	53.76	52.53	54.99	false	true
+intersection	compatible	Auckland	SDG-12	work	7111	3575	1550	21.8	20.85	22.77	43.36	41.74	44.99	false	true
+intersection	compatible	Auckland	SDG-13	work	6345	2999	2385	37.59	36.4	38.79	79.53	78.05	80.93	false	true
+intersection	compatible	Auckland	SDG-14	work	4528	2318	1521	33.59	32.23	34.98	65.62	63.66	67.52	false	true
+intersection	compatible	Auckland	SDG-15	work	10217	3919	2847	27.87	27.0	28.74	72.65	71.23	74.02	false	true
+intersection	compatible	Auckland	SDG-16	work	6344	5217	2680	42.24	41.03	43.46	51.37	50.01	52.73	false	true
+intersection	compatible	Auckland	SDG-17	work	0	322	0							true	false
+intersection	compatible	Auckland	all	work-goal pair	180988	174196	100445	55.5	55.27	55.73	57.66	57.43	57.89	false	true
+intersection	compatible	Auckland	any	work, any goal	133231	158083	103983	78.05	77.82	78.27	65.78	65.54	66.01	false	true
+intersection	compatible	union	SDG-01	work	5089	858	611	12.01	11.14	12.93	71.21	68.09	74.14	false	true
+intersection	compatible	union	SDG-02	work	9839	5995	3546	36.04	35.1	36.99	59.15	57.9	60.39	false	true
+intersection	compatible	union	SDG-03	work	72964	93457	57822	79.25	78.95	79.54	61.87	61.56	62.18	false	true
+intersection	compatible	union	SDG-04	work	15501	14199	9577	61.78	61.02	62.55	67.45	66.67	68.21	false	true
+intersection	compatible	union	SDG-05	work	2969	2234	1336	45.0	43.22	46.79	59.8	57.75	61.82	false	true
+intersection	compatible	union	SDG-06	work	6535	5306	3725	57.0	55.8	58.2	70.2	68.96	71.42	false	true
+intersection	compatible	union	SDG-07	work	12765	8715	6337	49.64	48.78	50.51	72.71	71.77	73.64	false	true
+intersection	compatible	union	SDG-08	work	9181	6939	3178	34.61	33.65	35.59	45.8	44.63	46.97	false	true
+intersection	compatible	union	SDG-09	work	10481	8360	2295	21.9	21.12	22.7	27.45	26.51	28.42	false	true
+intersection	compatible	union	SDG-10	work	11527	3500	1759	15.26	14.61	15.93	50.26	48.6	51.91	false	true
+intersection	compatible	union	SDG-11	work	15245	6283	4078	26.75	26.05	27.46	64.91	63.72	66.08	false	true
+intersection	compatible	union	SDG-12	work	9650	3575	2080	21.55	20.75	22.39	58.18	56.56	59.79	false	true
+intersection	compatible	union	SDG-13	work	9599	2999	2537	26.43	25.56	27.32	84.59	83.26	85.84	false	true
+intersection	compatible	union	SDG-14	work	5432	2318	1726	31.77	30.55	33.03	74.46	72.65	76.19	false	true
+intersection	compatible	union	SDG-15	work	12848	3919	3161	24.6	23.87	25.36	80.66	79.39	81.86	false	true
+intersection	compatible	union	SDG-16	work	9163	5217	3142	34.29	33.32	35.27	60.23	58.89	61.55	false	true
+intersection	compatible	union	SDG-17	work	846	322	98	11.58	9.6	13.92	30.43	25.66	35.67	false	true
+intersection	compatible	union	all	work-goal pair	219634	174196	107008	48.72	48.51	48.93	61.43	61.2	61.66	false	true
+intersection	compatible	union	any	work, any goal	144711	158083	109567	75.71	75.49	75.93	69.31	69.08	69.54	false	true
+union	corrected	Aurora	SDG-01	work	1103	4923	719	65.19	62.33	67.94	14.6	13.65	15.62	false	true
+union	corrected	Aurora	SDG-02	work	740	17595	692	93.51	91.5	95.07	3.93	3.66	4.23	false	true
+union	corrected	Aurora	SDG-03	work	5592	119314	3935	70.37	69.16	71.55	3.3	3.2	3.4	false	true
+union	corrected	Aurora	SDG-04	work	1826	21318	1340	73.38	71.31	75.36	6.29	5.97	6.62	false	true
+union	corrected	Aurora	SDG-05	work	517	5669	450	87.04	83.87	89.66	7.94	7.26	8.67	false	true
+union	corrected	Aurora	SDG-06	work	1453	10340	1350	92.91	91.48	94.12	13.06	12.42	13.72	false	true
+union	corrected	Aurora	SDG-07	work	687	18905	570	82.97	79.98	85.6	3.02	2.78	3.27	false	true
+union	corrected	Aurora	SDG-08	work	809	23280	707	87.39	84.93	89.5	3.04	2.82	3.27	false	true
+union	corrected	Aurora	SDG-09	work	530	53931	393	74.15	70.26	77.7	0.73	0.66	0.8	false	true
+union	corrected	Aurora	SDG-10	work	333	15437	274	82.28	77.82	86.01	1.77	1.58	2.0	false	true
+union	corrected	Aurora	SDG-11	work	1700	20037	1473	86.65	84.95	88.18	7.35	7.0	7.72	false	true
+union	corrected	Aurora	SDG-12	work	1764	21651	1424	80.73	78.82	82.5	6.58	6.25	6.92	false	true
+union	corrected	Aurora	SDG-13	work	5472	10801	4025	73.56	72.37	74.71	37.27	36.36	38.18	false	true
+union	corrected	Aurora	SDG-14	work	1998	5220	1443	72.22	70.22	74.14	27.64	26.45	28.87	false	true
+union	corrected	Aurora	SDG-15	work	1620	12903	919	56.73	54.3	59.12	7.12	6.69	7.58	false	true
+union	corrected	Aurora	SDG-16	work	1468	17547	1242	84.6	82.67	86.36	7.08	6.71	7.47	false	true
+union	corrected	Aurora	SDG-17	work	846	3434	388	45.86	42.53	49.23	11.3	10.28	12.4	false	true
+union	corrected	Aurora	all	work-goal pair	28458	382305	21344	75.0	74.5	75.5	5.58	5.51	5.66	false	true
+union	corrected	Aurora	any	work, any goal	24069	234171	23278	96.71	96.48	96.93	9.94	9.82	10.06	false	true
+union	corrected	Elsevier	SDG-01	work	2623	4923	594	22.65	21.08	24.29	12.07	11.19	13.01	false	true
+union	corrected	Elsevier	SDG-02	work	2555	17595	2237	87.55	86.22	88.78	12.71	12.23	13.21	false	true
+union	corrected	Elsevier	SDG-03	work	39651	119314	37745	95.19	94.98	95.4	31.64	31.37	31.9	false	true
+union	corrected	Elsevier	SDG-04	work	973	21318	879	90.34	88.32	92.04	4.12	3.86	4.4	false	true
+union	corrected	Elsevier	SDG-05	work	1133	5669	905	79.88	77.44	82.11	15.96	15.03	16.94	false	true
+union	corrected	Elsevier	SDG-06	work	1443	10340	1374	95.22	93.99	96.2	13.29	12.65	13.96	false	true
+union	corrected	Elsevier	SDG-07	work	6421	18905	5240	81.61	80.64	82.54	27.72	27.08	28.36	false	true
+union	corrected	Elsevier	SDG-08	work	3633	23280	2910	80.1	78.77	81.37	12.5	12.08	12.93	false	true
+union	corrected	Elsevier	SDG-09	work	1004	53931	885	88.15	86.0	90.0	1.64	1.54	1.75	false	true
+union	corrected	Elsevier	SDG-10	work	1246	15437	833	66.85	64.19	69.41	5.4	5.05	5.76	false	true
+union	corrected	Elsevier	SDG-11	work	3168	20037	2744	86.62	85.39	87.76	13.69	13.23	14.18	false	true
+union	corrected	Elsevier	SDG-12	work	2338	21651	1805	77.2	75.46	78.86	8.34	7.98	8.71	false	true
+union	corrected	Elsevier	SDG-13	work	4166	10801	3246	77.92	76.63	79.15	30.05	29.2	30.92	false	true
+union	corrected	Elsevier	SDG-14	work	516	5220	466	90.31	87.45	92.57	8.93	8.18	9.73	false	true
+union	corrected	Elsevier	SDG-15	work	2130	12903	1594	74.84	72.95	76.63	12.35	11.8	12.93	false	true
+union	corrected	Elsevier	SDG-16	work	4477	17547	3647	81.46	80.3	82.57	20.78	20.19	21.39	false	true
+union	corrected	Elsevier	SDG-17	work	0	3434	0							true	false
+union	corrected	Elsevier	all	work-goal pair	77477	382305	67104	86.61	86.37	86.85	17.55	17.43	17.67	false	true
+union	corrected	Elsevier	any	work, any goal	67698	234171	65851	97.27	97.15	97.39	28.12	27.94	28.3	false	true
+union	corrected	SIRIS	SDG-01	work	2056	4923	1270	61.77	59.65	63.85	25.8	24.59	27.04	false	true
+union	corrected	SIRIS	SDG-02	work	3313	17595	2744	82.83	81.5	84.07	15.6	15.07	16.14	false	true
+union	corrected	SIRIS	SDG-03	work	9391	119314	8155	86.84	86.14	87.51	6.83	6.69	6.98	false	true
+union	corrected	SIRIS	SDG-04	work	2657	21318	2125	79.98	78.41	81.46	9.97	9.57	10.38	false	true
+union	corrected	SIRIS	SDG-05	work	1543	5669	1243	80.56	78.51	82.46	21.93	20.87	23.02	false	true
+union	corrected	SIRIS	SDG-06	work	4049	10340	3497	86.37	85.28	87.39	33.82	32.91	34.74	false	true
+union	corrected	SIRIS	SDG-07	work	8130	18905	6496	79.9	79.02	80.76	34.36	33.69	35.04	false	true
+union	corrected	SIRIS	SDG-08	work	4374	23280	2181	49.86	48.38	51.34	9.37	9.0	9.75	false	true
+union	corrected	SIRIS	SDG-09	work	4296	53931	2568	59.78	58.3	61.23	4.76	4.59	4.94	false	true
+union	corrected	SIRIS	SDG-10	work	5202	15437	2450	47.1	45.74	48.46	15.87	15.3	16.46	false	true
+union	corrected	SIRIS	SDG-11	work	6296	20037	4111	65.3	64.11	66.46	20.52	19.96	21.08	false	true
+union	corrected	SIRIS	SDG-12	work	3761	21651	2951	78.46	77.12	79.75	13.63	13.18	14.09	false	true
+union	corrected	SIRIS	SDG-13	work	6219	10801	4042	64.99	63.8	66.17	37.42	36.51	38.34	false	true
+union	corrected	SIRIS	SDG-14	work	1739	5220	1190	68.43	66.21	70.57	22.8	21.68	23.95	false	true
+union	corrected	SIRIS	SDG-15	work	4488	12903	3397	75.69	74.41	76.92	26.33	25.57	27.09	false	true
+union	corrected	SIRIS	SDG-16	work	4631	17547	3053	65.93	64.55	67.28	17.4	16.85	17.97	false	true
+union	corrected	SIRIS	SDG-17	work	0	3434	0							true	false
+union	corrected	SIRIS	all	work-goal pair	72145	382305	51473	71.35	71.02	71.68	13.46	13.36	13.57	false	true
+union	corrected	SIRIS	any	work, any goal	51412	234171	49124	95.55	95.37	95.72	20.98	20.81	21.14	false	true
+union	corrected	Auckland	SDG-01	work	1964	4923	1127	57.38	55.18	59.55	22.89	21.74	24.09	false	true
+union	corrected	Auckland	SDG-02	work	8246	17595	5169	62.68	61.64	63.72	29.38	28.71	30.06	false	true
+union	corrected	Auckland	SDG-03	work	70538	119314	63633	90.21	89.99	90.43	53.33	53.05	53.62	false	true
+union	corrected	Auckland	SDG-04	work	14251	21318	10970	76.98	76.28	77.66	51.46	50.79	52.13	false	true
+union	corrected	Auckland	SDG-05	work	2529	5669	1712	67.69	65.85	69.49	30.2	29.02	31.41	false	true
+union	corrected	Auckland	SDG-06	work	5927	10340	4777	80.6	79.57	81.58	46.2	45.24	47.16	false	true
+union	corrected	Auckland	SDG-07	work	9829	18905	8216	83.59	82.84	84.31	43.46	42.75	44.17	false	true
+union	corrected	Auckland	SDG-08	work	6180	23280	4863	78.69	77.65	79.69	20.89	20.37	21.42	false	true
+union	corrected	Auckland	SDG-09	work	7088	53931	4910	69.27	68.19	70.34	9.1	8.86	9.35	false	true
+union	corrected	Auckland	SDG-10	work	8192	15437	3505	42.79	41.72	43.86	22.71	22.05	23.37	false	true
+union	corrected	Auckland	SDG-11	work	11699	20037	6388	54.6	53.7	55.5	31.88	31.24	32.53	false	true
+union	corrected	Auckland	SDG-12	work	7111	21651	4385	61.67	60.53	62.79	20.25	19.72	20.79	false	true
+union	corrected	Auckland	SDG-13	work	6345	10801	5062	79.78	78.77	80.75	46.87	45.93	47.81	false	true
+union	corrected	Auckland	SDG-14	work	4528	5220	2562	56.58	55.13	58.02	49.08	47.73	50.44	false	true
+union	corrected	Auckland	SDG-15	work	10217	12903	5477	53.61	52.64	54.57	42.45	41.6	43.3	false	true
+union	corrected	Auckland	SDG-16	work	6344	17547	4697	74.04	72.95	75.1	26.77	26.12	27.43	false	true
+union	corrected	Auckland	SDG-17	work	0	3434	0							true	false
+union	corrected	Auckland	all	work-goal pair	180988	382305	137453	75.95	75.75	76.14	35.95	35.8	36.11	false	true
+union	corrected	Auckland	any	work, any goal	133231	234171	127122	95.41	95.3	95.53	54.29	54.08	54.49	false	true
+union	corrected	union	SDG-01	work	5088	4923	1758	34.55	33.26	35.87	35.71	34.38	37.06	false	true
+union	corrected	union	SDG-02	work	9855	17595	6300	63.93	62.97	64.87	35.81	35.1	36.52	false	true
+union	corrected	union	SDG-03	work	72911	119314	65081	89.26	89.03	89.48	54.55	54.26	54.83	false	true
+union	corrected	union	SDG-04	work	15500	21318	11548	74.5	73.81	75.18	54.17	53.5	54.84	false	true
+union	corrected	union	SDG-05	work	2969	5669	2013	67.8	66.1	69.46	35.51	34.27	36.76	false	true
+union	corrected	union	SDG-06	work	6472	10340	5115	79.03	78.02	80.01	49.47	48.5	50.43	false	true
+union	corrected	union	SDG-07	work	12715	18905	9758	76.74	76.0	77.47	51.62	50.9	52.33	false	true
+union	corrected	union	SDG-08	work	9181	23280	5805	63.23	62.24	64.21	24.94	24.38	25.5	false	true
+union	corrected	union	SDG-09	work	10479	53931	6684	63.78	62.86	64.7	12.39	12.12	12.67	false	true
+union	corrected	union	SDG-10	work	11524	15437	4586	39.8	38.91	40.69	29.71	28.99	30.43	false	true
+union	corrected	union	SDG-11	work	15159	20037	7978	52.63	51.83	53.42	39.82	39.14	40.5	false	true
+union	corrected	union	SDG-12	work	9645	21651	6011	62.32	61.35	63.28	27.76	27.17	28.36	false	true
+union	corrected	union	SDG-13	work	9588	10801	5887	61.4	60.42	62.37	54.5	53.56	55.44	false	true
+union	corrected	union	SDG-14	work	5432	5220	2959	54.47	53.15	55.79	56.69	55.34	58.02	false	true
+union	corrected	union	SDG-15	work	12839	12903	6625	51.6	50.74	52.46	51.34	50.48	52.21	false	true
+union	corrected	union	SDG-16	work	9158	17547	6068	66.26	65.28	67.22	34.58	33.88	35.29	false	true
+union	corrected	union	SDG-17	work	846	3434	388	45.86	42.53	49.23	11.3	10.28	12.4	false	true
+union	corrected	union	all	work-goal pair	219361	382305	154564	70.46	70.27	70.65	40.43	40.27	40.59	false	true
+union	corrected	union	any	work, any goal	144617	234171	136897	94.66	94.54	94.78	58.46	58.26	58.66	false	true
+union	compatible	Aurora	SDG-01	work	1105	4923	720	65.16	62.3	67.91	14.63	13.67	15.64	false	true
+union	compatible	Aurora	SDG-02	work	691	17595	648	93.78	91.72	95.35	3.68	3.41	3.97	false	true
+union	compatible	Aurora	SDG-03	work	5987	119314	4309	71.97	70.82	73.1	3.61	3.51	3.72	false	true
+union	compatible	Aurora	SDG-04	work	1831	21318	1345	73.46	71.39	75.43	6.31	5.99	6.64	false	true
+union	compatible	Aurora	SDG-05	work	517	5669	450	87.04	83.87	89.66	7.94	7.26	8.67	false	true
+union	compatible	Aurora	SDG-06	work	1658	10340	1487	89.69	88.13	91.06	14.38	13.72	15.07	false	true
+union	compatible	Aurora	SDG-07	work	1483	18905	1297	87.46	85.67	89.05	6.86	6.51	7.23	false	true
+union	compatible	Aurora	SDG-08	work	873	23280	769	88.09	85.77	90.07	3.3	3.08	3.54	false	true
+union	compatible	Aurora	SDG-09	work	533	53931	396	74.3	70.42	77.82	0.73	0.67	0.81	false	true
+union	compatible	Aurora	SDG-10	work	348	15437	289	83.05	78.75	86.62	1.87	1.67	2.1	false	true
+union	compatible	Aurora	SDG-11	work	1947	20037	1638	84.13	82.44	85.69	8.17	7.8	8.56	false	true
+union	compatible	Aurora	SDG-12	work	1793	21651	1447	80.7	78.81	82.46	6.68	6.36	7.02	false	true
+union	compatible	Aurora	SDG-13	work	5484	10801	4028	73.45	72.27	74.6	37.29	36.39	38.21	false	true
+union	compatible	Aurora	SDG-14	work	1998	5220	1443	72.22	70.22	74.14	27.64	26.45	28.87	false	true
+union	compatible	Aurora	SDG-15	work	1662	12903	954	57.4	55.01	59.76	7.39	6.95	7.86	false	true
+union	compatible	Aurora	SDG-16	work	1476	17547	1245	84.35	82.41	86.11	7.1	6.72	7.48	false	true
+union	compatible	Aurora	SDG-17	work	846	3434	388	45.86	42.53	49.23	11.3	10.28	12.4	false	true
+union	compatible	Aurora	all	work-goal pair	30232	382305	22853	75.59	75.1	76.07	5.98	5.9	6.05	false	true
+union	compatible	Aurora	any	work, any goal	25349	234171	24527	96.76	96.53	96.97	10.47	10.35	10.6	false	true
+union	compatible	Elsevier	SDG-01	work	2623	4923	594	22.65	21.08	24.29	12.07	11.19	13.01	false	true
+union	compatible	Elsevier	SDG-02	work	2555	17595	2237	87.55	86.22	88.78	12.71	12.23	13.21	false	true
+union	compatible	Elsevier	SDG-03	work	39651	119314	37745	95.19	94.98	95.4	31.64	31.37	31.9	false	true
+union	compatible	Elsevier	SDG-04	work	973	21318	879	90.34	88.32	92.04	4.12	3.86	4.4	false	true
+union	compatible	Elsevier	SDG-05	work	1133	5669	905	79.88	77.44	82.11	15.96	15.03	16.94	false	true
+union	compatible	Elsevier	SDG-06	work	1443	10340	1374	95.22	93.99	96.2	13.29	12.65	13.96	false	true
+union	compatible	Elsevier	SDG-07	work	6421	18905	5240	81.61	80.64	82.54	27.72	27.08	28.36	false	true
+union	compatible	Elsevier	SDG-08	work	3633	23280	2910	80.1	78.77	81.37	12.5	12.08	12.93	false	true
+union	compatible	Elsevier	SDG-09	work	1004	53931	885	88.15	86.0	90.0	1.64	1.54	1.75	false	true
+union	compatible	Elsevier	SDG-10	work	1246	15437	833	66.85	64.19	69.41	5.4	5.05	5.76	false	true
+union	compatible	Elsevier	SDG-11	work	3168	20037	2744	86.62	85.39	87.76	13.69	13.23	14.18	false	true
+union	compatible	Elsevier	SDG-12	work	2338	21651	1805	77.2	75.46	78.86	8.34	7.98	8.71	false	true
+union	compatible	Elsevier	SDG-13	work	4166	10801	3246	77.92	76.63	79.15	30.05	29.2	30.92	false	true
+union	compatible	Elsevier	SDG-14	work	516	5220	466	90.31	87.45	92.57	8.93	8.18	9.73	false	true
+union	compatible	Elsevier	SDG-15	work	2130	12903	1594	74.84	72.95	76.63	12.35	11.8	12.93	false	true
+union	compatible	Elsevier	SDG-16	work	4477	17547	3647	81.46	80.3	82.57	20.78	20.19	21.39	false	true
+union	compatible	Elsevier	SDG-17	work	0	3434	0							true	false
+union	compatible	Elsevier	all	work-goal pair	77477	382305	67104	86.61	86.37	86.85	17.55	17.43	17.67	false	true
+union	compatible	Elsevier	any	work, any goal	67698	234171	65851	97.27	97.15	97.39	28.12	27.94	28.3	false	true
+union	compatible	SIRIS	SDG-01	work	2056	4923	1270	61.77	59.65	63.85	25.8	24.59	27.04	false	true
+union	compatible	SIRIS	SDG-02	work	3313	17595	2744	82.83	81.5	84.07	15.6	15.07	16.14	false	true
+union	compatible	SIRIS	SDG-03	work	9391	119314	8155	86.84	86.14	87.51	6.83	6.69	6.98	false	true
+union	compatible	SIRIS	SDG-04	work	2657	21318	2125	79.98	78.41	81.46	9.97	9.57	10.38	false	true
+union	compatible	SIRIS	SDG-05	work	1543	5669	1243	80.56	78.51	82.46	21.93	20.87	23.02	false	true
+union	compatible	SIRIS	SDG-06	work	4049	10340	3497	86.37	85.28	87.39	33.82	32.91	34.74	false	true
+union	compatible	SIRIS	SDG-07	work	8130	18905	6496	79.9	79.02	80.76	34.36	33.69	35.04	false	true
+union	compatible	SIRIS	SDG-08	work	4374	23280	2181	49.86	48.38	51.34	9.37	9.0	9.75	false	true
+union	compatible	SIRIS	SDG-09	work	4296	53931	2568	59.78	58.3	61.23	4.76	4.59	4.94	false	true
+union	compatible	SIRIS	SDG-10	work	5202	15437	2450	47.1	45.74	48.46	15.87	15.3	16.46	false	true
+union	compatible	SIRIS	SDG-11	work	6296	20037	4111	65.3	64.11	66.46	20.52	19.96	21.08	false	true
+union	compatible	SIRIS	SDG-12	work	3761	21651	2951	78.46	77.12	79.75	13.63	13.18	14.09	false	true
+union	compatible	SIRIS	SDG-13	work	6219	10801	4042	64.99	63.8	66.17	37.42	36.51	38.34	false	true
+union	compatible	SIRIS	SDG-14	work	1739	5220	1190	68.43	66.21	70.57	22.8	21.68	23.95	false	true
+union	compatible	SIRIS	SDG-15	work	4488	12903	3397	75.69	74.41	76.92	26.33	25.57	27.09	false	true
+union	compatible	SIRIS	SDG-16	work	4631	17547	3053	65.93	64.55	67.28	17.4	16.85	17.97	false	true
+union	compatible	SIRIS	SDG-17	work	0	3434	0							true	false
+union	compatible	SIRIS	all	work-goal pair	72145	382305	51473	71.35	71.02	71.68	13.46	13.36	13.57	false	true
+union	compatible	SIRIS	any	work, any goal	51412	234171	49124	95.55	95.37	95.72	20.98	20.81	21.14	false	true
+union	compatible	Auckland	SDG-01	work	1964	4923	1127	57.38	55.18	59.55	22.89	21.74	24.09	false	true
+union	compatible	Auckland	SDG-02	work	8246	17595	5169	62.68	61.64	63.72	29.38	28.71	30.06	false	true
+union	compatible	Auckland	SDG-03	work	70538	119314	63633	90.21	89.99	90.43	53.33	53.05	53.62	false	true
+union	compatible	Auckland	SDG-04	work	14251	21318	10970	76.98	76.28	77.66	51.46	50.79	52.13	false	true
+union	compatible	Auckland	SDG-05	work	2529	5669	1712	67.69	65.85	69.49	30.2	29.02	31.41	false	true
+union	compatible	Auckland	SDG-06	work	5927	10340	4777	80.6	79.57	81.58	46.2	45.24	47.16	false	true
+union	compatible	Auckland	SDG-07	work	9829	18905	8216	83.59	82.84	84.31	43.46	42.75	44.17	false	true
+union	compatible	Auckland	SDG-08	work	6180	23280	4863	78.69	77.65	79.69	20.89	20.37	21.42	false	true
+union	compatible	Auckland	SDG-09	work	7088	53931	4910	69.27	68.19	70.34	9.1	8.86	9.35	false	true
+union	compatible	Auckland	SDG-10	work	8192	15437	3505	42.79	41.72	43.86	22.71	22.05	23.37	false	true
+union	compatible	Auckland	SDG-11	work	11699	20037	6388	54.6	53.7	55.5	31.88	31.24	32.53	false	true
+union	compatible	Auckland	SDG-12	work	7111	21651	4385	61.67	60.53	62.79	20.25	19.72	20.79	false	true
+union	compatible	Auckland	SDG-13	work	6345	10801	5062	79.78	78.77	80.75	46.87	45.93	47.81	false	true
+union	compatible	Auckland	SDG-14	work	4528	5220	2562	56.58	55.13	58.02	49.08	47.73	50.44	false	true
+union	compatible	Auckland	SDG-15	work	10217	12903	5477	53.61	52.64	54.57	42.45	41.6	43.3	false	true
+union	compatible	Auckland	SDG-16	work	6344	17547	4697	74.04	72.95	75.1	26.77	26.12	27.43	false	true
+union	compatible	Auckland	SDG-17	work	0	3434	0							true	false
+union	compatible	Auckland	all	work-goal pair	180988	382305	137453	75.95	75.75	76.14	35.95	35.8	36.11	false	true
+union	compatible	Auckland	any	work, any goal	133231	234171	127122	95.41	95.3	95.53	54.29	54.08	54.49	false	true
+union	compatible	union	SDG-01	work	5089	4923	1758	34.55	33.25	35.86	35.71	34.38	37.06	false	true
+union	compatible	union	SDG-02	work	9839	17595	6287	63.9	62.94	64.84	35.73	35.03	36.44	false	true
+union	compatible	union	SDG-03	work	72964	119314	65119	89.25	89.02	89.47	54.58	54.3	54.86	false	true
+union	compatible	union	SDG-04	work	15501	21318	11549	74.5	73.81	75.18	54.17	53.51	54.84	false	true
+union	compatible	union	SDG-05	work	2969	5669	2013	67.8	66.1	69.46	35.51	34.27	36.76	false	true
+union	compatible	union	SDG-06	work	6535	10340	5137	78.61	77.6	79.58	49.68	48.72	50.64	false	true
+union	compatible	union	SDG-07	work	12765	18905	9786	76.66	75.92	77.39	51.76	51.05	52.48	false	true
+union	compatible	union	SDG-08	work	9181	23280	5805	63.23	62.24	64.21	24.94	24.38	25.5	false	true
+union	compatible	union	SDG-09	work	10481	53931	6686	63.79	62.87	64.71	12.4	12.12	12.68	false	true
+union	compatible	union	SDG-10	work	11527	15437	4589	39.81	38.92	40.71	29.73	29.01	30.45	false	true
+union	compatible	union	SDG-11	work	15245	20037	8002	52.49	51.7	53.28	39.94	39.26	40.62	false	true
+union	compatible	union	SDG-12	work	9650	21651	6014	62.32	61.35	63.28	27.78	27.18	28.38	false	true
+union	compatible	union	SDG-13	work	9599	10801	5890	61.36	60.38	62.33	54.53	53.59	55.47	false	true
+union	compatible	union	SDG-14	work	5432	5220	2959	54.47	53.15	55.79	56.69	55.34	58.02	false	true
+union	compatible	union	SDG-15	work	12848	12903	6630	51.6	50.74	52.47	51.38	50.52	52.25	false	true
+union	compatible	union	SDG-16	work	9163	17547	6068	66.22	65.25	67.18	34.58	33.88	35.29	false	true
+union	compatible	union	SDG-17	work	846	3434	388	45.86	42.53	49.23	11.3	10.28	12.4	false	true
+union	compatible	union	all	work-goal pair	219634	382305	154680	70.43	70.24	70.62	40.46	40.3	40.62	false	true
+union	compatible	union	any	work, any goal	144711	234171	136976	94.65	94.54	94.77	58.49	58.29	58.69	false	true

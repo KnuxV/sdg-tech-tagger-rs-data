@@ -1,14 +1,22 @@
 """Build the files of the data record from the recall sample and the tools' runs.
 
-Consumes, read-only:
-- the prepared recall sample of open_alex_adt_gate (300,001 OpenAlex works,
-  with the `text` the tools read and the flags of the two technology queries);
-- the port's SDG firings in corrected mode stored there (`recall_sdg_hits`);
-- the eight LLM runs on the sample (SDG and technology, pass 1 and 2, qwen3
-  and gemma);
-- for set 1, the R runs of text2sdg 1.1.2 in both modes, written by
-  `r/detect_text2sdg.R` and `r/detect_text2sdg_corrected.R` of
-  text2sdg_rust_port, sharded as `<r-dir>/{compat,corr}/shard_<i>/chunks/`.
+This script was run in the private environment where the sample was drawn
+and the tools were run; it is given for transparency, and cannot be run
+without the inputs below, which are not part of the record (the sample's
+`text` holds publishers' abstracts). It imports the port under the name it
+had during development, `text2sdg_rust_port`; the published package is the
+same code and imports as `sdg_tech_tagger`.
+
+Consumes, read-only, from the directories given on the command line:
+- `--interim`: the prepared sample (300,001 OpenAlex works, with the `text`
+  the tools read and the flags of the two technology queries), the port's
+  SDG firings in corrected mode (`recall_sdg_hits`), and the eight LLM runs
+  on the sample (SDG and technology, pass 1 and 2, qwen3 and gemma);
+- `--probe`: the script that sums up the queries and the LLM on the sample,
+  the one place the LLM semantics are written, with its output tables
+  beside it;
+- `--r-dir`, for set 1: the R runs of text2sdg 1.1.2 in both modes, sharded
+  as `<r-dir>/{compat,corr}/shard_<i>/chunks/`.
 
 Runs the port itself in compatible mode on the sample's text, and in
 corrected mode on a subset to check the stored firings.
@@ -18,13 +26,14 @@ Produces, under `data/`: `works.parquet`, `annotations/{sdg,technology,llm}.parq
 is there), and `SHA256SUMS`; and fills the agreement block of `README.md`.
 No title, abstract or DOI is written.
 
-The LLM semantics are those of text2sdg_rust_port's
-`probes/recall_summary_probe/summarise.py`, imported, not re-derived: a label
+The LLM semantics are those of the summary script given by `--probe`,
+imported, not re-derived: a label
 is positive for a model when its pass 1 score is at or above 0.25 and pass 2
 answers a positive letter; the consensus is positive under both models.
 
-Usage, from the root of this repository:
-    uv run --project /home/knuxv/Codebase/text2sdg_rust_port python build/build.py \
+Usage, from the root of this repository, in an environment where the port
+is installed:
+    python build/build.py --interim <dir> --probe <summarise.py> \
         --r-dir <directory of the R runs>
     ... --skip-r    to write set 2 alone
 """
@@ -43,8 +52,6 @@ from text2sdg_rust_port import detect
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
-PORT_REPO = Path("/home/knuxv/Codebase/text2sdg_rust_port")
-PROBE = PORT_REPO / "probes/recall_summary_probe/summarise.py"
 SHARDS = 5
 CHUNK = 2000
 CHECK_SUBSET = 5000
@@ -64,9 +71,9 @@ README_START = "<!-- agreement:start -->"
 README_END = "<!-- agreement:end -->"
 
 
-def load_probe():
+def load_probe(path: Path):
     """Import the summary probe, the one place the LLM semantics are written."""
-    spec = importlib.util.spec_from_file_location("summarise", PROBE)
+    spec = importlib.util.spec_from_file_location("summarise", path)
     module = importlib.util.module_from_spec(spec)
     sys.modules["summarise"] = module
     spec.loader.exec_module(module)
@@ -130,7 +137,7 @@ def port_firings(docs: pl.DataFrame, mode: str) -> pl.DataFrame:
 
 
 def stored_corrected(interim: Path) -> pl.DataFrame:
-    """The port's corrected-mode firings stored by open_alex_adt_gate."""
+    """The port's corrected-mode firings stored with the sample."""
     return pl.read_parquet(interim / "recall_sdg_hits.parquet").select(
         short_id("id"), "system", "sdg", pl.col("query_id").cast(pl.Int32), "features"
     )
@@ -332,7 +339,8 @@ def fill_readme(table: pl.DataFrame | None) -> None:
     text = readme.read_text()
     if table is None:
         body = (
-            "Set 1 is not built yet: the R runs on all 300,001 works are not complete."
+            "The agreement table of set 1 is written here by `build/build.py`"
+            " once both R runs are complete."
         )
     else:
         cols = [
@@ -371,18 +379,15 @@ def write_sums() -> None:
 def main() -> None:
     """Build every file of the record; set 1 only when the R runs are complete."""
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument(
-        "--interim",
-        type=Path,
-        default=Path("/home/knuxv/Codebase/open_alex_adt_gate/data/interim"),
-    )
+    ap.add_argument("--interim", type=Path, required=True)
+    ap.add_argument("--probe", type=Path, required=True)
     ap.add_argument("--r-dir", type=Path)
     ap.add_argument("--skip-r", action="store_true", help="write set 2 alone")
     args = ap.parse_args()
     if not args.skip_r and args.r_dir is None:
         ap.error("--r-dir is required unless --skip-r is given")
 
-    probe = load_probe()
+    probe = load_probe(args.probe)
     sample = load_sample(args.interim)
     ids_full = sample["id"]
     ids = sample.select(short_id("id"))["work_id"]
@@ -421,7 +426,7 @@ def main() -> None:
     )
 
     llm, _checks = llm_table(probe, args.interim, ids_full)
-    assert_llm_counts(llm, PROBE.parent)
+    assert_llm_counts(llm, args.probe.parent)
     llm.write_parquet(DATA / "annotations/llm.parquet", compression="zstd")
     print("LLM positive counts equal the probe's")
 

@@ -23,20 +23,20 @@
   ],
   "related_identifiers": [
     {
-      "identifier": "TODO: DOI of the sdg-tech-tagger-rs Zenodo record, once it exists",
-      "relation": "isSupplementTo",
-      "resource_type": "software"
-    },
-    {
       "identifier": "10.32614/CRAN.package.text2sdg",
       "relation": "references",
       "resource_type": "software"
     },
     {
       "identifier": "arXiv:2205.01833",
-      "relation": "isDerivedFrom",
+      "relation": "references",
       "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://openalex.org",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset"
     }
   ],
-  "notes": "Prepared, not published: to be released after the Nature Communications revision."
+  "language": "eng"
 }
