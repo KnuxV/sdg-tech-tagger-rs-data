@@ -17,14 +17,18 @@ Consumes, read-only, from the directories given on the command line:
   beside it, which are copied to `data/summary/` with the two technology
   queries named `simplified` and `extended`;
 - `--r-dir`, for set 1: the R runs of text2sdg 1.1.2 in both modes, sharded
-  as `<r-dir>/{compat,corr}/shard_<i>/chunks/`.
+  as `<r-dir>/{compat,corr}/shard_<i>/chunks/`, with the documents each shard
+  was given in `<r-dir>/shards/shard_<i>.parquet` (`UT`, `text`). A work left
+  out of the shards was not given to R: text2sdg 1.1.2 stops with an error on
+  a text holding a Unicode noncharacter (U+FFFE), so those works are compared
+  on nothing and listed in `r_vs_port/not_run_in_r.tsv`.
 
 Runs the port itself in compatible mode on the sample's text, and in
 corrected mode on a subset to check the stored firings.
 
 Produces, under `data/`: `works.parquet`, `annotations/{sdg,technology,llm}.parquet`,
 `summary/*.tsv`,
-`r_vs_port/{firings.parquet,agreement.tsv}` (set 1, only when every R chunk
+`r_vs_port/{firings.parquet,agreement.tsv,not_run_in_r.tsv}` (set 1, only when every R chunk
 is there), and `SHA256SUMS`; and fills the agreement block of `README.md`.
 No title, abstract or DOI is written.
 
@@ -291,9 +295,26 @@ def r_firings(r_dir: Path, mode: str) -> pl.DataFrame:
     )
 
 
+def r_input(r_dir: Path) -> list[pl.Series]:
+    """Return, per shard, the work ids R was given (short form)."""
+    return [
+        pl.read_parquet(r_dir / "shards" / f"shard_{i}.parquet", columns=["UT"]).select(
+            short_id("UT")
+        )["work_id"]
+        for i in range(SHARDS)
+    ]
+
+
 def set_one(r_dir: Path, port: dict[str, pl.DataFrame], ids: pl.Series) -> pl.DataFrame:
-    """Join R and port firings per mode; write firings and the agreement table."""
+    """Join R and port firings per mode on the works R was given; write set 1."""
     keys = ["work_id", "mode", "system", "sdg", "query_id"]
+    given = pl.concat(r_input(r_dir))
+    assert given.is_in(ids.implode()).all(), "a shard holds a work outside the sample"
+    out = DATA / "r_vs_port"
+    out.mkdir(parents=True, exist_ok=True)
+    pl.DataFrame({"work_id": ids.filter(~ids.is_in(given.implode()))}).with_columns(
+        pl.lit("text holds U+FFFE; text2sdg 1.1.2 stops with an error").alias("reason")
+    ).sort("work_id").write_csv(out / "not_run_in_r.tsv", separator="\t")
     parts = []
     for short, mode in MODES.items():
         r = r_firings(r_dir, short).with_columns(pl.lit(mode).alias("mode"))
@@ -301,7 +322,8 @@ def set_one(r_dir: Path, port: dict[str, pl.DataFrame], ids: pl.Series) -> pl.Da
         assert r["work_id"].is_in(ids.implode()).all(), (
             f"R {mode}: work outside the sample"
         )
-        p = port[mode].with_columns(pl.lit(mode).alias("mode"))
+        p = port[mode].filter(pl.col("work_id").is_in(given.implode()))
+        p = p.with_columns(pl.lit(mode).alias("mode"))
         j = r.rename({"features": "features_r"}).join(
             p.rename({"features": "features_port"}), on=keys, how="full", coalesce=True
         )
@@ -322,8 +344,6 @@ def set_one(r_dir: Path, port: dict[str, pl.DataFrame], ids: pl.Series) -> pl.Da
             .alias("features_equal")
         )
     )
-    out = DATA / "r_vs_port"
-    out.mkdir(parents=True, exist_ok=True)
     f.sort(keys).write_parquet(out / "firings.parquet", compression="zstd")
     agg = [
         pl.len().alias("firings"),
@@ -417,9 +437,8 @@ def main() -> None:
     ids = sample.select(short_id("id"))["work_id"]
 
     # Refuse early, before any file is written, if set 1 is asked for and not ready.
-    n, size = sample.height, math.ceil(sample.height / SHARDS)
-    sizes = [min(size, n - i * size) for i in range(SHARDS)]
     if not args.skip_r:
+        sizes = [s.len() for s in r_input(args.r_dir)]
         missing = r_complete(args.r_dir, sizes)
         if missing:
             sys.exit("R runs incomplete, set 1 not written:\n  " + "\n  ".join(missing))

@@ -1,0 +1,8 @@
+work_id	reason
+W3097222633	text holds U+FFFE; text2sdg 1.1.2 stops with an error
+W4200601441	text holds U+FFFE; text2sdg 1.1.2 stops with an error
+W4225300639	text holds U+FFFE; text2sdg 1.1.2 stops with an error
+W4303859552	text holds U+FFFE; text2sdg 1.1.2 stops with an error
+W4313813374	text holds U+FFFE; text2sdg 1.1.2 stops with an error
+W4362673655	text holds U+FFFE; text2sdg 1.1.2 stops with an error
+W4396993073	text holds U+FFFE; text2sdg 1.1.2 stops with an error

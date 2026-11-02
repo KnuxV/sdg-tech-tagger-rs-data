@@ -1,0 +1,11 @@
+mode	system	firings	both	port_only	r_only	features_equal
+compatible	Auckland	180986	180983	0	3	180976
+compatible	Aurora	33230	33230	0	0	33230
+compatible	Elsevier	77477	77477	0	0	77477
+compatible	SIRIS	98242	98242	0	0	98242
+compatible	all	389935	389932	0	3	389925
+corrected	Auckland	180986	180983	0	3	180976
+corrected	Aurora	31090	31090	0	0	31090
+corrected	Elsevier	77477	77477	0	0	77477
+corrected	SIRIS	98242	98242	0	0	98242
+corrected	all	387795	387792	0	3	387785
