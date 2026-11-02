@@ -40,7 +40,7 @@ OpenAlex with the work identifiers (see below).
 - **Technology queries:** `simplified` (six groups) and `extended` (the
   same six groups with more terms each, and `UMBRELLA`). Both ship with the
   package, which lists every term in `docs/technology-queries.md`.
-- **LLM:** two models, `qwen3` (Qwen 3.6 35B A3B) and `gemma` (Gemma 4 31B),
+- **LLM:** two models, `qwen3` (Qwen 3.8 27B) and `gemma` (Gemma 4 31B),
   each given a fixed prompt per pass (the prompts are not part of this record). Pass
   1 scores every label of every work; pass 2 asks again for every (work,
   label) whose pass 1 score is at least 0.25. A label is **positive** for a
@@ -51,7 +51,18 @@ OpenAlex with the work identifiers (see below).
 ## Set 1: R against Rust
 
 <!-- agreement:start -->
-The agreement table of set 1 is written here by `build/build.py` once both R runs are complete.
+| mode | system | firings | both | port_only | r_only | features_equal |
+|---|---|---|---|---|---|---|
+| compatible | Auckland | 180,986 | 180,983 | 0 | 3 | 180,976 |
+| compatible | Aurora | 33,230 | 33,230 | 0 | 0 | 33,230 |
+| compatible | Elsevier | 77,477 | 77,477 | 0 | 0 | 77,477 |
+| compatible | SIRIS | 98,242 | 98,242 | 0 | 0 | 98,242 |
+| compatible | all | 389,935 | 389,932 | 0 | 3 | 389,925 |
+| corrected | Auckland | 180,986 | 180,983 | 0 | 3 | 180,976 |
+| corrected | Aurora | 31,090 | 31,090 | 0 | 0 | 31,090 |
+| corrected | Elsevier | 77,477 | 77,477 | 0 | 0 | 77,477 |
+| corrected | SIRIS | 98,242 | 98,242 | 0 | 0 | 98,242 |
+| corrected | all | 387,795 | 387,792 | 0 | 3 | 387,785 |
 <!-- agreement:end -->
 
 On a first random subset of 2,000 of these works, R and the port gave the
@@ -63,16 +74,16 @@ with the same matched words, and none on one side only.
 All tables are Parquet. `work_id` is the OpenAlex identifier without its
 URL prefix (`W...`); `https://openalex.org/` + `work_id` is the work.
 
-| File | One row per | Columns |
-|---|---|---|
-| `data/works.parquet` | work | `work_id`, `publication_year`, `type` (article, review), `field`, `subfield` (OpenAlex topics), `has_abstract`, `text_chars`, `text_sha256` |
-| `data/annotations/sdg.parquet` | firing of the port | `work_id`, `mode` (corrected, compatible), `system`, `sdg` (SDG-01 to SDG-17), `query_id` (the query's row in text2sdg's table), `features` (the matched words, comma separated) |
-| `data/annotations/technology.parquet` | (work, query, group) that fires | `work_id`, `query` (simplified, extended), `group` (AI, IOT, CI, BL, ROB, AM, UMBRELLA), `title`, `abstract` (Booleans: where it fires) |
-| `data/annotations/llm.parquet` | (work, exercise, label) | `work_id`, `exercise` (sdg, adt), `label` (SDG-01 to SDG-17; AI, IOT, COMPUTING_INFRASTRUCTURE, BLOCKCHAIN, ROBOTICS, ADDITIVE_MANUFACTURING), then for each model `<model>_pass1_score`, `<model>_pass2_answer` (null when pass 2 was not asked; `OTHER` when the answer was no letter), `<model>_positive`; and `consensus_positive` |
-| `data/r_vs_port/firings.parquet` | (work, mode, system, sdg, query_id) fired by R or the port | `work_id`, `mode`, `system`, `sdg`, `query_id`, `features_r`, `features_port`, `in_r`, `in_port`, `features_equal` |
-| `data/r_vs_port/agreement.tsv` | (mode, system) | `firings`, `both`, `port_only`, `r_only`, `features_equal` |
-| `data/summary/*.tsv` | see `data/summary/README.md` | aggregate counts and the comparison with the LLM |
-| `data/SHA256SUMS` | file | checksums of everything under `data/` |
+| File                                  | One row per                                                | Columns                                                                                                                                                                                                                                                                                                                                |
+| ------------------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data/works.parquet`                  | work                                                       | `work_id`, `publication_year`, `type` (article, review), `field`, `subfield` (OpenAlex topics), `has_abstract`, `text_chars`, `text_sha256`                                                                                                                                                                                            |
+| `data/annotations/sdg.parquet`        | firing of the port                                         | `work_id`, `mode` (corrected, compatible), `system`, `sdg` (SDG-01 to SDG-17), `query_id` (the query's row in text2sdg's table), `features` (the matched words, comma separated)                                                                                                                                                       |
+| `data/annotations/technology.parquet` | (work, query, group) that fires                            | `work_id`, `query` (simplified, extended), `group` (AI, IOT, CI, BL, ROB, AM, UMBRELLA), `title`, `abstract` (Booleans: where it fires)                                                                                                                                                                                                |
+| `data/annotations/llm.parquet`        | (work, exercise, label)                                    | `work_id`, `exercise` (sdg, adt), `label` (SDG-01 to SDG-17; AI, IOT, COMPUTING_INFRASTRUCTURE, BLOCKCHAIN, ROBOTICS, ADDITIVE_MANUFACTURING), then for each model `<model>_pass1_score`, `<model>_pass2_answer` (null when pass 2 was not asked; `OTHER` when the answer was no letter), `<model>_positive`; and `consensus_positive` |
+| `data/r_vs_port/firings.parquet`      | (work, mode, system, sdg, query_id) fired by R or the port | `work_id`, `mode`, `system`, `sdg`, `query_id`, `features_r`, `features_port`, `in_r`, `in_port`, `features_equal`                                                                                                                                                                                                                     |
+| `data/r_vs_port/agreement.tsv`        | (mode, system)                                             | `firings`, `both`, `port_only`, `r_only`, `features_equal`                                                                                                                                                                                                                                                                             |
+| `data/summary/*.tsv`                  | see `data/summary/README.md`                               | aggregate counts and the comparison with the LLM                                                                                                                                                                                                                                                                                       |
+| `data/SHA256SUMS`                     | file                                                       | checksums of everything under `data/`                                                                                                                                                                                                                                                                                                  |
 
 A work absent from `sdg.parquet` or `technology.parquet` is a work on which
 nothing fired. Technology rows exist only where the group fires in the title
