@@ -1,0 +1,2 @@
+# Nothing large is ignored: the data files are committed (about 30 MB).
+__pycache__/

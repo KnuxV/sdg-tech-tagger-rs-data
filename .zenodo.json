@@ -1,0 +1,42 @@
+{
+  "upload_type": "dataset",
+  "title": "sdg-tech-tagger-rs data: 300,001 OpenAlex works tagged with SDGs and digital technologies by queries and by LLMs",
+  "version": "0.1.0",
+  "description": "<p>A random sample of 300,001 OpenAlex works of 2019 to 2024 (articles and reviews in English, snapshot of 2026-02-03), tagged with sustainable development goals by the four query systems of text2sdg (Aurora, Elsevier, SIRIS, Auckland), run in R (text2sdg 1.1.2) and in its Rust port sdg-tech-tagger-rs in two modes, with the words each matched; with digital technologies by two query sets; and by two large language models. Set 1 compares R and the port firing for firing; set 2 gives every tag per work. Identifiers and tags only, no title or abstract.</p>",
+  "creators": [
+    {
+      "name": "Michoud, Kevin",
+      "affiliation": "University of Strasbourg",
+      "orcid": "0009-0002-5245-6088"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "access_right": "open",
+  "keywords": [
+    "sustainable development goals",
+    "SDG",
+    "text2sdg",
+    "digital technologies",
+    "OpenAlex",
+    "bibliometrics",
+    "large language models"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "TODO: DOI of the sdg-tech-tagger-rs Zenodo record, once it exists",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.32614/CRAN.package.text2sdg",
+      "relation": "references",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "arXiv:2205.01833",
+      "relation": "isDerivedFrom",
+      "resource_type": "publication-preprint"
+    }
+  ],
+  "notes": "Prepared, not published: to be released after the Nature Communications revision."
+}

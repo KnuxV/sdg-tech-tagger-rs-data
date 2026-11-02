@@ -1,0 +1,64 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it, the package sdg-tech-tagger-rs, text2sdg and OpenAlex."
+title: "sdg-tech-tagger-rs data: 300,001 OpenAlex works tagged with SDGs and digital technologies by queries and by LLMs"
+type: dataset
+version: "0.1.0"
+license: CC-BY-4.0
+abstract: >-
+  A random sample of 300,001 OpenAlex works of 2019 to 2024, tagged with
+  sustainable development goals by the four query systems of text2sdg
+  (Aurora, Elsevier, SIRIS, Auckland), run both in R (text2sdg 1.1.2) and in
+  its Rust port sdg-tech-tagger-rs in two modes, with the words each matched;
+  with digital technologies by two query sets; and by two large language
+  models. Identifiers and tags only, no text.
+keywords:
+  - sustainable development goals
+  - SDG
+  - text2sdg
+  - digital technologies
+  - OpenAlex
+  - bibliometrics
+  - large language models
+authors:
+  - family-names: Michoud
+    given-names: Kevin
+    email: kmichoud@unistra.fr
+    orcid: "https://orcid.org/0009-0002-5245-6088"
+    affiliation: "University of Strasbourg"
+references:
+  - type: software
+    title: "sdg-tech-tagger-rs: tagging texts with SDGs and digital technologies by published queries"
+    version: "0.1.0"
+    license: GPL-3.0-only
+    authors:
+      - family-names: Michoud
+        given-names: Kevin
+        orcid: "https://orcid.org/0009-0002-5245-6088"
+  - type: software
+    title: "text2sdg: Detecting UN Sustainable Development Goals in Text"
+    version: "1.1.2"
+    date-released: "2025-09-08"
+    license: GPL-3.0-only
+    doi: 10.32614/CRAN.package.text2sdg
+    url: "https://cran.r-project.org/package=text2sdg"
+    authors:
+      - family-names: Wulff
+        given-names: Dirk U.
+        orcid: "https://orcid.org/0000-0002-4008-8022"
+      - family-names: Meier
+        given-names: Dominik S.
+        orcid: "https://orcid.org/0000-0002-3999-1388"
+  - type: article
+    title: "OpenAlex: A fully-open index of scholarly works, authors, venues, institutions, and concepts"
+    year: 2022
+    url: "https://arxiv.org/abs/2205.01833"
+    identifiers:
+      - type: other
+        value: "arXiv:2205.01833"
+    authors:
+      - family-names: Priem
+        given-names: Jason
+      - family-names: Piwowar
+        given-names: Heather
+      - family-names: Orr
+        given-names: Richard
