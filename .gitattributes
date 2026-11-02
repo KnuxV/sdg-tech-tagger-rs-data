@@ -1,0 +1,3 @@
+# Every text file is checked out with LF line endings on every platform, so
+# the shipped query files and their SHA256SUMS are the same bytes everywhere.
+* text=auto eol=lf
